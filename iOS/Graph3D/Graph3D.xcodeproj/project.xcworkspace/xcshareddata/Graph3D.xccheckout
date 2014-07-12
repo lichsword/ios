@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>42AC463F-DEFD-4782-913D-AA29CBA4293E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Graph3D</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>00586612-D0AC-4F18-8110-D1801BC70A2C</key>
+		<string>https://github.com/lichsword/ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/Graph3D/Graph3D.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>00586612-D0AC-4F18-8110-D1801BC70A2C</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lichsword/ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>00586612-D0AC-4F18-8110-D1801BC70A2C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>00586612-D0AC-4F18-8110-D1801BC70A2C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Graph3D</string>
+		</dict>
+	</array>
+</dict>
+</plist>

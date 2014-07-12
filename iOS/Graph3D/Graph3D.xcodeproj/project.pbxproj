@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84625741197158AA00096DB0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84625740197158AA00096DB0 /* Cocoa.framework */; };
+		8462574B197158AA00096DB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84625749197158AA00096DB0 /* InfoPlist.strings */; };
+		84625751197158AA00096DB0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8462574F197158AA00096DB0 /* Credits.rtf */; };
+		84625757197158AA00096DB0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84625755197158AA00096DB0 /* MainMenu.xib */; };
+		84625759197158AA00096DB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84625758197158AA00096DB0 /* Images.xcassets */; };
+		84625760197158AA00096DB0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8462575F197158AA00096DB0 /* XCTest.framework */; };
+		84625761197158AA00096DB0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84625740197158AA00096DB0 /* Cocoa.framework */; };
+		84625769197158AA00096DB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84625767197158AA00096DB0 /* InfoPlist.strings */; };
+		8462576B197158AA00096DB0 /* Graph3DTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8462576A197158AA00096DB0 /* Graph3DTests.m */; };
+		846257751971590C00096DB0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846257741971590C00096DB0 /* OpenGL.framework */; };
+		846257771971591200096DB0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846257761971591200096DB0 /* GLUT.framework */; };
+		846257791971595B00096DB0 /* libGLTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 846257781971595B00096DB0 /* libGLTools.a */; };
+		8462577C1971598000096DB0 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8462577A1971598000096DB0 /* Main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84625762197158AA00096DB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84625735197158AA00096DB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8462573C197158AA00096DB0;
+			remoteInfo = Graph3D;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8462573D197158AA00096DB0 /* Graph3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84625740197158AA00096DB0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		84625743197158AA00096DB0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		84625744197158AA00096DB0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		84625745197158AA00096DB0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84625748197158AA00096DB0 /* Graph3D-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Graph3D-Info.plist"; sourceTree = "<group>"; };
+		8462574A197158AA00096DB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8462574E197158AA00096DB0 /* Graph3D-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Graph3D-Prefix.pch"; sourceTree = "<group>"; };
+		84625750197158AA00096DB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		84625756197158AA00096DB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		84625758197158AA00096DB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8462575E197158AA00096DB0 /* Graph3DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Graph3DTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8462575F197158AA00096DB0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84625766197158AA00096DB0 /* Graph3DTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Graph3DTests-Info.plist"; sourceTree = "<group>"; };
+		84625768197158AA00096DB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8462576A197158AA00096DB0 /* Graph3DTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Graph3DTests.m; sourceTree = "<group>"; };
+		846257741971590C00096DB0 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		846257761971591200096DB0 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		846257781971595B00096DB0 /* libGLTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLTools.a; path = ../Libs/libGLTools.a; sourceTree = "<group>"; };
+		8462577A1971598000096DB0 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		8462577B1971598000096DB0 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8462573A197158AA00096DB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846257791971595B00096DB0 /* libGLTools.a in Frameworks */,
+				846257771971591200096DB0 /* GLUT.framework in Frameworks */,
+				846257751971590C00096DB0 /* OpenGL.framework in Frameworks */,
+				84625741197158AA00096DB0 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8462575B197158AA00096DB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84625761197158AA00096DB0 /* Cocoa.framework in Frameworks */,
+				84625760197158AA00096DB0 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84625734197158AA00096DB0 = {
+			isa = PBXGroup;
+			children = (
+				84625746197158AA00096DB0 /* Graph3D */,
+				84625764197158AA00096DB0 /* Graph3DTests */,
+				8462573F197158AA00096DB0 /* Frameworks */,
+				8462573E197158AA00096DB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8462573E197158AA00096DB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8462573D197158AA00096DB0 /* Graph3D.app */,
+				8462575E197158AA00096DB0 /* Graph3DTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8462573F197158AA00096DB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				846257781971595B00096DB0 /* libGLTools.a */,
+				846257761971591200096DB0 /* GLUT.framework */,
+				846257741971590C00096DB0 /* OpenGL.framework */,
+				84625740197158AA00096DB0 /* Cocoa.framework */,
+				8462575F197158AA00096DB0 /* XCTest.framework */,
+				84625742197158AA00096DB0 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84625742197158AA00096DB0 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84625743197158AA00096DB0 /* AppKit.framework */,
+				84625744197158AA00096DB0 /* CoreData.framework */,
+				84625745197158AA00096DB0 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		84625746197158AA00096DB0 /* Graph3D */ = {
+			isa = PBXGroup;
+			children = (
+				84625755197158AA00096DB0 /* MainMenu.xib */,
+				84625758197158AA00096DB0 /* Images.xcassets */,
+				84625747197158AA00096DB0 /* Supporting Files */,
+				8462577A1971598000096DB0 /* Main.cpp */,
+				8462577B1971598000096DB0 /* Main.h */,
+			);
+			path = Graph3D;
+			sourceTree = "<group>";
+		};
+		84625747197158AA00096DB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84625748197158AA00096DB0 /* Graph3D-Info.plist */,
+				84625749197158AA00096DB0 /* InfoPlist.strings */,
+				8462574E197158AA00096DB0 /* Graph3D-Prefix.pch */,
+				8462574F197158AA00096DB0 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84625764197158AA00096DB0 /* Graph3DTests */ = {
+			isa = PBXGroup;
+			children = (
+				8462576A197158AA00096DB0 /* Graph3DTests.m */,
+				84625765197158AA00096DB0 /* Supporting Files */,
+			);
+			path = Graph3DTests;
+			sourceTree = "<group>";
+		};
+		84625765197158AA00096DB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84625766197158AA00096DB0 /* Graph3DTests-Info.plist */,
+				84625767197158AA00096DB0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8462573C197158AA00096DB0 /* Graph3D */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8462576E197158AA00096DB0 /* Build configuration list for PBXNativeTarget "Graph3D" */;
+			buildPhases = (
+				84625739197158AA00096DB0 /* Sources */,
+				8462573A197158AA00096DB0 /* Frameworks */,
+				8462573B197158AA00096DB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Graph3D;
+			productName = Graph3D;
+			productReference = 8462573D197158AA00096DB0 /* Graph3D.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8462575D197158AA00096DB0 /* Graph3DTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84625771197158AA00096DB0 /* Build configuration list for PBXNativeTarget "Graph3DTests" */;
+			buildPhases = (
+				8462575A197158AA00096DB0 /* Sources */,
+				8462575B197158AA00096DB0 /* Frameworks */,
+				8462575C197158AA00096DB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84625763197158AA00096DB0 /* PBXTargetDependency */,
+			);
+			name = Graph3DTests;
+			productName = Graph3DTests;
+			productReference = 8462575E197158AA00096DB0 /* Graph3DTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84625735197158AA00096DB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___LICHSOWRD___";
+				TargetAttributes = {
+					8462575D197158AA00096DB0 = {
+						TestTargetID = 8462573C197158AA00096DB0;
+					};
+				};
+			};
+			buildConfigurationList = 84625738197158AA00096DB0 /* Build configuration list for PBXProject "Graph3D" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84625734197158AA00096DB0;
+			productRefGroup = 8462573E197158AA00096DB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8462573C197158AA00096DB0 /* Graph3D */,
+				8462575D197158AA00096DB0 /* Graph3DTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8462573B197158AA00096DB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8462574B197158AA00096DB0 /* InfoPlist.strings in Resources */,
+				84625759197158AA00096DB0 /* Images.xcassets in Resources */,
+				84625751197158AA00096DB0 /* Credits.rtf in Resources */,
+				84625757197158AA00096DB0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8462575C197158AA00096DB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84625769197158AA00096DB0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84625739197158AA00096DB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8462577C1971598000096DB0 /* Main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8462575A197158AA00096DB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8462576B197158AA00096DB0 /* Graph3DTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84625763197158AA00096DB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8462573C197158AA00096DB0 /* Graph3D */;
+			targetProxy = 84625762197158AA00096DB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84625749197158AA00096DB0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8462574A197158AA00096DB0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8462574F197158AA00096DB0 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84625750197158AA00096DB0 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		84625755197158AA00096DB0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84625756197158AA00096DB0 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		84625767197158AA00096DB0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84625768197158AA00096DB0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8462576C197158AA00096DB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8462576D197158AA00096DB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8462576F197158AA00096DB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graph3D/Graph3D-Prefix.pch";
+				INFOPLIST_FILE = "Graph3D/Graph3D-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lichsword/Documents/workspace_apple/iOS/Libs,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84625770197158AA00096DB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graph3D/Graph3D-Prefix.pch";
+				INFOPLIST_FILE = "Graph3D/Graph3D-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lichsword/Documents/workspace_apple/iOS/Libs,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		84625772197158AA00096DB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Graph3D.app/Contents/MacOS/Graph3D";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graph3D/Graph3D-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Graph3DTests/Graph3DTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		84625773197158AA00096DB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Graph3D.app/Contents/MacOS/Graph3D";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Graph3D/Graph3D-Prefix.pch";
+				INFOPLIST_FILE = "Graph3DTests/Graph3DTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84625738197158AA00096DB0 /* Build configuration list for PBXProject "Graph3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8462576C197158AA00096DB0 /* Debug */,
+				8462576D197158AA00096DB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8462576E197158AA00096DB0 /* Build configuration list for PBXNativeTarget "Graph3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8462576F197158AA00096DB0 /* Debug */,
+				84625770197158AA00096DB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84625771197158AA00096DB0 /* Build configuration list for PBXNativeTarget "Graph3DTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84625772197158AA00096DB0 /* Debug */,
+				84625773197158AA00096DB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84625735197158AA00096DB0 /* Project object */;
+}
