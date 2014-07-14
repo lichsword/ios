@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840A911619727B6E00551A3C /* libFreetype2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A911519727B6E00551A3C /* libFreetype2.a */; };
 		84625741197158AA00096DB0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84625740197158AA00096DB0 /* Cocoa.framework */; };
 		8462574B197158AA00096DB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84625749197158AA00096DB0 /* InfoPlist.strings */; };
 		84625751197158AA00096DB0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8462574F197158AA00096DB0 /* Credits.rtf */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840A911519727B6E00551A3C /* libFreetype2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreetype2.a; path = ../Libs/libFreetype2.a; sourceTree = "<group>"; };
 		8462573D197158AA00096DB0 /* Graph3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84625740197158AA00096DB0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		84625743197158AA00096DB0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840A911619727B6E00551A3C /* libFreetype2.a in Frameworks */,
 				846257791971595B00096DB0 /* libGLTools.a in Frameworks */,
 				846257771971591200096DB0 /* GLUT.framework in Frameworks */,
 				846257751971590C00096DB0 /* OpenGL.framework in Frameworks */,
@@ -102,6 +105,7 @@
 		8462573F197158AA00096DB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				840A911519727B6E00551A3C /* libFreetype2.a */,
 				846257781971595B00096DB0 /* libGLTools.a */,
 				846257761971591200096DB0 /* GLUT.framework */,
 				846257741971590C00096DB0 /* OpenGL.framework */,
@@ -351,6 +355,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/lichsword/Documents/workspace_apple/others/freetype2-ios/include/**",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -384,6 +393,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/lichsword/Documents/workspace_apple/others/freetype2-ios/include/**",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
@@ -482,6 +496,7 @@
 				84625770197158AA00096DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84625771197158AA00096DB0 /* Build configuration list for PBXNativeTarget "Graph3DTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +505,7 @@
 				84625773197158AA00096DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
