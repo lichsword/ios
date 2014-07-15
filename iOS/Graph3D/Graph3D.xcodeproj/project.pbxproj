@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		840A911619727B6E00551A3C /* libFreetype2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A911519727B6E00551A3C /* libFreetype2.a */; };
+		844F0AE019751153003A78DE /* FreeType2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0ADE19751153003A78DE /* FreeType2.cpp */; };
 		84625741197158AA00096DB0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84625740197158AA00096DB0 /* Cocoa.framework */; };
 		8462574B197158AA00096DB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84625749197158AA00096DB0 /* InfoPlist.strings */; };
 		84625751197158AA00096DB0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8462574F197158AA00096DB0 /* Credits.rtf */; };
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		840A911519727B6E00551A3C /* libFreetype2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreetype2.a; path = ../Libs/libFreetype2.a; sourceTree = "<group>"; };
+		844F0ADE19751153003A78DE /* FreeType2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FreeType2.cpp; sourceTree = "<group>"; };
+		844F0ADF19751153003A78DE /* FreeType2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeType2.h; sourceTree = "<group>"; };
 		8462573D197158AA00096DB0 /* Graph3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84625740197158AA00096DB0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		84625743197158AA00096DB0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,8 @@
 				84625747197158AA00096DB0 /* Supporting Files */,
 				8462577A1971598000096DB0 /* Main.cpp */,
 				8462577B1971598000096DB0 /* Main.h */,
+				844F0ADE19751153003A78DE /* FreeType2.cpp */,
+				844F0ADF19751153003A78DE /* FreeType2.h */,
 			);
 			path = Graph3D;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844F0AE019751153003A78DE /* FreeType2.cpp in Sources */,
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
