@@ -37,7 +37,7 @@ GLfloat	cnt1;			// 字体移动计数器1
 GLfloat	cnt2;			// 字体移动计数器2
 
 filelog::filelog_data our_log;
-freeType2::font_data our_font;
+//freeType2::font_data our_font;
 scene::scene_data our_scene;
 
 char buffer[BUF_SIZE];
@@ -64,44 +64,15 @@ GLvoid glPrint(const char *fmt, ...){
 
 void initApp(){
     our_log.init();
-    our_font.init("/Library/Fonts/Arial.ttf", 16);
+//    our_font.init("/Library/Fonts/Arial.ttf", 16);
     our_scene.init();
 }
 
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    
     our_scene.display();
-//    glColor3ub(0xff,0xff,0xff);
-//    glPushMatrix();
-//    glLoadIdentity();
-//    glTranslatef(-180, 0, 0);
-//    freeType2::print(our_font, 320, 200, "FreeType");
-//    glPopMatrix();
 
-    
-        // 蓝色文字
-//    glColor3ub(0,0,0xff);
-    
-        // 绘制WGL文字
-//    glRasterPos2f(-0.40f, 0.35f);
-//    glPrint("Active WGL Bitmap Text With NeHe - %7.2f", cnt1);
-    
-        // 红色文字
-//    glColor3ub(0xff,0,0);
-    
-//    glPushMatrix();
-//    glLoadIdentity();
-//    glRotatef(cnt1,0,0,1);
-//    glScalef(1,.8+.3*cos(cnt1/5),1);
-//    glTranslatef(-180,0,0);
-        //绘制freetype文字
-//    freeType2::print(our_font, 320, 200, "Active FreeType Text*中文显示为空格*- %7.2f", cnt1);
-//    glPopMatrix();
-    
-//    cnt1+=0.51f;
-//    cnt2+=0.005f;
     glutPostRedisplay();
     glEnd();
     glFlush();
@@ -184,5 +155,5 @@ int main(int argc, char ** argv)
     glutMainLoop();
         // release res.
     our_log.release();
-    our_font.clean();
+//    our_font.clean();
 }

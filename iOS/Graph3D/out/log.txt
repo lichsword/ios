@@ -1,1 +1,6 @@
-press test click btn
+button=0, state=284, x=218, y=-1
+button=1, state=284, x=218, y=-1
+button=0, state=332, x=247, y=-1
+button=1, state=332, x=247, y=-1
+button=0, state=350, x=226, y=-1
+button=1, state=350, x=226, y=-1

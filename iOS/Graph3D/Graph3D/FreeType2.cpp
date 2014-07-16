@@ -242,8 +242,6 @@ namespace freeType2 {
     
         // 把字符输出到屏幕
     void print(const font_data &ft_font, float x, float y, const char *fmt, ...){
-        
-        char buff[256];
             // 保存当前矩阵
         pushScreenCoordinateMatrix();
         

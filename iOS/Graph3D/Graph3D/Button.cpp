@@ -40,9 +40,10 @@ namespace button {
     }
     
     void button_data::display(){
-        glEnable(GL_FLAT);
+        
         glPushMatrix();
         glLoadIdentity();
+        glEnable(GL_FLAT);
         glTranslatef(0.0f,0.0f,-1.0f);
         glBegin(GL_POLYGON);
         

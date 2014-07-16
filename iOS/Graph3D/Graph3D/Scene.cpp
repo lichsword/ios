@@ -9,9 +9,11 @@
 #include "FileLog.h"
 #include "Scene.h"
 #include "Button.h"
+#include "SurfaceView.h"
 
 namespace scene {
     
+    surfaceview::surfaceview_data our_surface;
     button::button_data our_button;
     filelog::filelog_data our_log;
     
@@ -24,6 +26,7 @@ namespace scene {
         our_button.set(50, 50, 100, 40);
         our_button.setText("demo");
         our_button.setOnClickFunc(testClickBtn);
+        our_surface.init();
     }
     
     void scene_data::finish(){
@@ -39,7 +42,8 @@ namespace scene {
     }
     
     void scene_data::display(){
-        our_button.display();
+        our_surface.display();
+        //        our_button.display();
     }
     
     void scene_data::onMouseEvent(int button, int state, int x, int y){
