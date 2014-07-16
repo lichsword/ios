@@ -19,6 +19,11 @@ namespace scene {
         void init();
         void finish();
         void display();
+        void onTouch(int x, int y);
+        void onMouseEvent(int button, int state, int x, int y);
+        void onMotion(int x, int y);
+        void onPassiveMotion(int x, int y);
+        void onEntry(int state);
     };
     
 }

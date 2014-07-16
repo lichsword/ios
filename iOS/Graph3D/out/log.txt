@@ -1,4 +1,1 @@
-state=0, x=128, y=63
-state=1, x=128, y=63
-state=0, x=150, y=112
-state=1, x=151, y=112
+press test click btn

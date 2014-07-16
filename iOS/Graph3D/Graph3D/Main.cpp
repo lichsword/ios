@@ -73,32 +73,6 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT);
     
     our_scene.display();
-//    glEnable(GL_FLAT);
-//    glPushMatrix();
-//    glLoadIdentity();
-//	glTranslatef(0.0f,0.0f,-1.0f);
-//    glBegin(GL_POLYGON);
-    
-        // 白色文字
-//    if(our_button.pressed){
-//        glColor3ub(0, 0xff, 0);
-//    }else{
-//        glColor3ub(0xff, 0, 0);
-//    }
-//    SCREENPOSITION screen_position;
-//    screen::map(&screen_position, our_button.left, our_button.top, our_button.width, our_button.height);
-//    glVertex2f(screen_position.left, screen_position.top);
-//    glVertex2f(screen_position.right, screen_position.top);
-//    glVertex2f(screen_position.right, screen_position.bottom);
-//    glVertex2f(screen_position.left, screen_position.bottom);
-        //    glVertex2f(-0.5, -0.5);
-        //    glVertex2f(-0.5, 0.5);
-        //    glVertex2f(0.5, 0.5);
-        //    glVertex2f(0.5, -0.5);
-//    glPopMatrix();
-    
-        //-----
-    
 //    glColor3ub(0xff,0xff,0xff);
 //    glPushMatrix();
 //    glLoadIdentity();
@@ -144,15 +118,53 @@ void keyboard(unsigned char key, int x, int y){
 }
 
 void mouse(int button , int state, int x, int y){
+    switch (button) {
+        case GLUT_LEFT_BUTTON:
+            break;
+        case GLUT_MIDDLE_BUTTON:
+            break;
+        case GLUT_RIGHT_BUTTON:
+            break;
+        default:
+            break;
+    }
+    
+    switch (state) {
+        case GLUT_UP:
+            break;
+        case GLUT_DOWN:
+            break;
+        default:
+            break;
+    }
+    
     memset(buffer, 0, BUF_SIZE);
-    sprintf(buffer, "state=%d, x=%d, y=%d\n", state, x, y);
+    sprintf(buffer, "button=%d, state=%d, x=%d, y=%d\n", state, x, y);
     our_log.e(buffer);
+    our_scene.onMouseEvent(button, state, x, y);
+}
 
-//    if(our_button.inArea(x, y)){
-//        our_button.pressed = 1;
-//    }else{
-//        our_button.pressed = 0;
-//    }
+/* 鼠标移动，且有按钮被按下 */
+void motion(int x, int y){
+    
+}
+
+/* 鼠标移动，无论是否有按钮按下 */
+void passiveMotion(int x, int y){
+    
+}
+
+void entry(int state){
+    switch (state) {
+        case GLUT_LEFT:
+                // 离开窗口
+            break;
+        case GLUT_ENTERED:
+                // 进入窗口
+            break;
+        default:
+            break;
+    }
 }
 
 int main(int argc, char ** argv)
@@ -164,6 +176,9 @@ int main(int argc, char ** argv)
     glutDisplayFunc(display);
     glutKeyboardFunc(keyboard);
     glutMouseFunc(mouse);
+    glutMotionFunc(motion);
+    glutPassiveMotionFunc(passiveMotion);
+    glutEntryFunc(entry);
     
     initApp();
     glutMainLoop();

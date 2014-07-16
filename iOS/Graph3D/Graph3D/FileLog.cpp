@@ -20,6 +20,7 @@ namespace filelog {
     void filelog_data::e(char * log){
         if(NULL!=lpFile){
             fputs(log, lpFile);
+            fflush(lpFile);
         }// end if
     }
     

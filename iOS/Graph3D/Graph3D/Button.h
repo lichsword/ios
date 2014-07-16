@@ -33,6 +33,10 @@ namespace button {
         
         char text[80];
         
+        void (* onClickFunc)(void);
+        
+        void setOnClickFunc(void (*func)(void));
+        
         int pressed;// 0: default; 1: pressed.
         
         int inArea(int x, int y);
@@ -42,6 +46,8 @@ namespace button {
         void setText(char * text);
         
         void display();
+        
+        void onClick();
     };
 }
 

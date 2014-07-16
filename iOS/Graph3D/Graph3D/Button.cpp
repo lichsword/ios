@@ -63,4 +63,14 @@ namespace button {
         glPopMatrix();
     }
     
+    void button_data::setOnClickFunc(void (*func)()){
+        this->onClickFunc = func;
+    }
+    
+    void button_data::onClick(){
+        if(NULL!=this->onClickFunc){
+            onClickFunc();
+        }// end if
+    }
+    
 }
