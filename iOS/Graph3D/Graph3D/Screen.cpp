@@ -10,17 +10,17 @@
 
 namespace screen {
     
-    int screen_data::map(LPSCREENPOSITION pos, int left, int top, int width, int height){
+    int map(LPSCREENPOSITION pos, int left, int top, int width, int height){
         int result = 0;
         
-        pos->left = this->left +(float)left / (float)this->real_w;
-        pos->right = this->left +(float)(left + width) / (float)this->real_w;
-//        pos->top = this->top +(float)top / (float)this->real_h ;
-//        pos->bottom = this->top +(float)(top + height) / (float)this->real_h ;
+        pos->left = virtual_left +(float)left / (float)half_w;
+        pos->right = virtual_left +(float)(left + width) / (float)half_w;
+//        pos->top = this->top +(float)top / (float)this->half_h ;
+//        pos->bottom = this->top +(float)(top + height) / (float)this->half_h ;
         
-        // opengl默认y轴向上，而不是GUI的y轴向下
-        pos->top = this->top - (float)top / (float)this->real_h ;
-        pos->bottom = this->top - (float)(top + height) / (float)this->real_h ;
+            // opengl默认y轴向上，而不是GUI的y轴向下
+        pos->top = virtual_top - (float)top / (float)half_h ;
+        pos->bottom = virtual_top - (float)(top + height) / (float)half_h ;
         
             // TODO result check.
         return result;

@@ -8,6 +8,7 @@
 #include "Main.h"
 #include "FileLog.h"
 #include "FreeType2.h"
+#include "Scene.h"
 #include "Screen.h"
 #include "Button.h"
 
@@ -37,8 +38,8 @@ GLfloat	cnt2;			// 字体移动计数器2
 
 filelog::filelog_data our_log;
 freeType2::font_data our_font;
-screen::screen_data our_screen;
-button::button_data our_button;
+scene::scene_data our_scene;
+
 char buffer[BUF_SIZE];
 
 GLvoid glPrint(const char *fmt, ...){
@@ -64,36 +65,46 @@ GLvoid glPrint(const char *fmt, ...){
 void initApp(){
     our_log.init();
     our_font.init("/Library/Fonts/Arial.ttf", 16);
-    our_button.set(50, 50, 100, 40);
+    our_scene.init();
 }
 
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
     
-    glEnable(GL_FLAT);
-    glPushMatrix();
-    glLoadIdentity();
-	glTranslatef(0.0f,0.0f,-1.0f);
-    glBegin(GL_POLYGON);
+    our_scene.display();
+//    glEnable(GL_FLAT);
+//    glPushMatrix();
+//    glLoadIdentity();
+//	glTranslatef(0.0f,0.0f,-1.0f);
+//    glBegin(GL_POLYGON);
     
         // 白色文字
-    if(our_button.pressed){
-        glColor3ub(0, 0xff, 0);
-    }else{
-        glColor3ub(0xff, 0, 0);
-    }
-    SCREENPOSITION screen_position;
-    our_screen.map(&screen_position, our_button.left, our_button.top, our_button.width, our_button.height);
-    glVertex2f(screen_position.left, screen_position.top);
-    glVertex2f(screen_position.right, screen_position.top);
-    glVertex2f(screen_position.right, screen_position.bottom);
-    glVertex2f(screen_position.left, screen_position.bottom);
+//    if(our_button.pressed){
+//        glColor3ub(0, 0xff, 0);
+//    }else{
+//        glColor3ub(0xff, 0, 0);
+//    }
+//    SCREENPOSITION screen_position;
+//    screen::map(&screen_position, our_button.left, our_button.top, our_button.width, our_button.height);
+//    glVertex2f(screen_position.left, screen_position.top);
+//    glVertex2f(screen_position.right, screen_position.top);
+//    glVertex2f(screen_position.right, screen_position.bottom);
+//    glVertex2f(screen_position.left, screen_position.bottom);
         //    glVertex2f(-0.5, -0.5);
         //    glVertex2f(-0.5, 0.5);
         //    glVertex2f(0.5, 0.5);
         //    glVertex2f(0.5, -0.5);
-    glPopMatrix();
+//    glPopMatrix();
+    
+        //-----
+    
+//    glColor3ub(0xff,0xff,0xff);
+//    glPushMatrix();
+//    glLoadIdentity();
+//    glTranslatef(-180, 0, 0);
+//    freeType2::print(our_font, 320, 200, "FreeType");
+//    glPopMatrix();
 
     
         // 蓝色文字
@@ -137,11 +148,11 @@ void mouse(int button , int state, int x, int y){
     sprintf(buffer, "state=%d, x=%d, y=%d\n", state, x, y);
     our_log.e(buffer);
 
-    if(our_button.inArea(x, y)){
-        our_button.pressed = 1;
-    }else{
-        our_button.pressed = 0;
-    }
+//    if(our_button.inArea(x, y)){
+//        our_button.pressed = 1;
+//    }else{
+//        our_button.pressed = 0;
+//    }
 }
 
 int main(int argc, char ** argv)

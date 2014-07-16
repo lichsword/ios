@@ -31,11 +31,17 @@ namespace button {
         int top;
         int left;
         
+        char text[80];
+        
         int pressed;// 0: default; 1: pressed.
         
         int inArea(int x, int y);
         
         void set(int left, int top, int width, int height);
+        
+        void setText(char * text);
+        
+        void display();
     };
 }
 
