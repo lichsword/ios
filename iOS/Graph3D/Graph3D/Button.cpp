@@ -42,10 +42,6 @@ namespace button {
     void button_data::display(){
         
         glPushMatrix();
-        glLoadIdentity();
-        glEnable(GL_FLAT);
-        glTranslatef(0.0f,0.0f,-1.0f);
-        glBegin(GL_POLYGON);
         
             // 白色文字
         if(pressed){
@@ -56,11 +52,18 @@ namespace button {
         SCREENPOSITION screen_position;
         screen::map(&screen_position, left, top, width, height);
         
+        glLoadIdentity();
+//        glEnable(GL_FLAT);
+//        glTranslatef(0.0f,0.0f,-1.0f);
+        glBegin(GL_POLYGON);
+
         glVertex2f(screen_position.left, screen_position.top);
         glVertex2f(screen_position.right, screen_position.top);
         glVertex2f(screen_position.right, screen_position.bottom);
         glVertex2f(screen_position.left, screen_position.bottom);
 
+        glEnd();
+        
         glPopMatrix();
     }
     

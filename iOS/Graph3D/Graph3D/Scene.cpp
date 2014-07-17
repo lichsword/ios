@@ -42,8 +42,8 @@ namespace scene {
     }
     
     void scene_data::display(){
+        our_button.display();
         our_surface.display();
-        //        our_button.display();
     }
     
     void scene_data::onMouseEvent(int button, int state, int x, int y){

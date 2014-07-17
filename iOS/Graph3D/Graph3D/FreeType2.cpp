@@ -75,8 +75,8 @@ namespace freeType2 {
         glTranslatef(0,bitmap_glyph->top-bitmap.rows,0);
         
             // 计算位图中字符图像的宽度
-        float x=(float)bitmap.width / (float)width,
-        y=(float)bitmap.rows / (float)height;
+        float x=(float)bitmap.width / (float)width;
+        float y=(float)bitmap.rows / (float)height;
         
             //绘制一个正方形，显示字符
         glBegin(GL_QUADS);
@@ -300,7 +300,7 @@ namespace freeType2 {
         for(int i=0;i<lines.size();i++) {
             glPushMatrix();
             glLoadIdentity();
-            glTranslatef(x,y-h*i,0);
+            glTranslatef(x, y-h*i, 0);
             glMultMatrixf(modelview_matrix);
             
                 //            vector<FT_ULong> ftlist;
