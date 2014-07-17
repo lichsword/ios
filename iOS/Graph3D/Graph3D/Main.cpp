@@ -32,13 +32,10 @@ FT_Vector delta;
 
 GLYPHMETRICSFLOAT gmf[256];					// Storage For Information About Our Font
 
-GLuint  base;
-GLfloat	cnt1;			// 字体移动计数器1
-GLfloat	cnt2;			// 字体移动计数器2
+GLuint base;
 
 filelog::filelog_data our_log;
-//freeType2::font_data our_font;
-scene::scene_data our_scene;
+Scene our_scene(1);
 
 char buffer[BUF_SIZE];
 
@@ -64,7 +61,6 @@ GLvoid glPrint(const char *fmt, ...){
 
 void initApp(){
     our_log.init();
-//    our_font.init("/Library/Fonts/Arial.ttf", 16);
     our_scene.init();
 }
 

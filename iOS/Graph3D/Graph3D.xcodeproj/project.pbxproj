@@ -14,6 +14,7 @@
 		844F0AE919754EDE003A78DE /* FileLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AE719754EDE003A78DE /* FileLog.cpp */; };
 		844F0AEC1976604E003A78DE /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AEA1976604E003A78DE /* Scene.cpp */; };
 		844F0AEF1976A906003A78DE /* SurfaceView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AED1976A906003A78DE /* SurfaceView.cpp */; };
+		844F0AF31977EB34003A78DE /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AF11977EB34003A78DE /* View.cpp */; };
 		84625741197158AA00096DB0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84625740197158AA00096DB0 /* Cocoa.framework */; };
 		8462574B197158AA00096DB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84625749197158AA00096DB0 /* InfoPlist.strings */; };
 		84625751197158AA00096DB0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8462574F197158AA00096DB0 /* Credits.rtf */; };
@@ -53,6 +54,8 @@
 		844F0AEB1976604E003A78DE /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		844F0AED1976A906003A78DE /* SurfaceView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SurfaceView.cpp; sourceTree = "<group>"; };
 		844F0AEE1976A906003A78DE /* SurfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurfaceView.h; sourceTree = "<group>"; };
+		844F0AF11977EB34003A78DE /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
+		844F0AF21977EB34003A78DE /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		8462573D197158AA00096DB0 /* Graph3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84625740197158AA00096DB0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		84625743197158AA00096DB0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -101,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844F0AF51977EB43003A78DE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				844F0AF11977EB34003A78DE /* View.cpp */,
+				844F0AF21977EB34003A78DE /* View.h */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		84625734197158AA00096DB0 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 		84625746197158AA00096DB0 /* Graph3D */ = {
 			isa = PBXGroup;
 			children = (
+				844F0AF51977EB43003A78DE /* view */,
 				84625755197158AA00096DB0 /* MainMenu.xib */,
 				84625758197158AA00096DB0 /* Images.xcassets */,
 				84625747197158AA00096DB0 /* Supporting Files */,
@@ -299,6 +312,7 @@
 				844F0AE019751153003A78DE /* FreeType2.cpp in Sources */,
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,
 				844F0AE319752A17003A78DE /* Button.cpp in Sources */,
+				844F0AF31977EB34003A78DE /* View.cpp in Sources */,
 				844F0AEF1976A906003A78DE /* SurfaceView.cpp in Sources */,
 				844F0AE919754EDE003A78DE /* FileLog.cpp in Sources */,
 				844F0AE619752D06003A78DE /* Screen.cpp in Sources */,

@@ -26,11 +26,19 @@ typedef struct{
 }SCREENPOSITION;
 typedef  SCREENPOSITION * LPSCREENPOSITION;
 
-namespace screen {
-    using std::vector;
-    using std::string;
+class Screen {
+private:
+    static Screen * sInstance;
+    Screen();
+public:
+    static Screen* getInstance(){
+        if(NULL==sInstance){
+            sInstance = new Screen();
+        }// end if
+        return sInstance;
+    }
     
-    const float virtual_left = -1.0;
+    const float virtual_left = -1.0f;
     const float virtual_top = 1.0;
     const float virtual_right = 1.0;
     const float virtual_bottom = -1.0;
@@ -44,6 +52,8 @@ namespace screen {
     const int half_h = real_h /2;
 
     int map(LPSCREENPOSITION pos, int left, int top, int width, int height);
-}
+};
+
+Screen * Screen::sInstance=NULL;
 
 #endif /* defined(__Graph3D__Screen__) */
