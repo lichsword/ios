@@ -32,10 +32,20 @@ using std::vector;
 using std::string;
 
 class FreeType2{
-private:
-    static FreeType2 * sInstance;// 单例对象指针
+public:
+    static FreeType2 * getInstance(){
+        if(NULL==sInstance){
+            sInstance = new FreeType2();
+        }// end if
+        return sInstance;
+    }
+        // 把字符输出到屏幕
+    void print(float x, float y, const char *fmt, ...);
+public:
     static char FONT_PATH[];// 字体所在库的路径
     static int FONT_SIZE_H;// 字符高度
+private:
+    static FreeType2 * sInstance;// 单例对象指针
     float h; // 字体的高度
     GLuint * textures; // 使用的纹理
     GLuint list_base; // 显示列表的值
@@ -51,15 +61,7 @@ private:
     inline void pushScreenCoordinateMatrix();
     inline void pop_projection_matrix();
     void make_dlist(FT_Face face, char ch, GLuint list_base, GLuint * tex_base);
-public:
-    static FreeType2 * getInstance(){
-        if(NULL==sInstance){
-            sInstance = new FreeType2();
-        }// end if
-        return sInstance;
-    }
-        // 把字符输出到屏幕
-    void print(float x, float y, const char *fmt, ...);
+
 };
 
 #endif /* defined(__Graph3D__FreeType2__) */

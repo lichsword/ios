@@ -12,8 +12,8 @@
 #include "SurfaceView.h"
 
 surfaceview::surfaceview_data our_surface;
-Button showFreetypeButton(50, 50, 100, 40);
-Button showTrangleButton(50, 100, 100, 40);
+Button showFreetypeButton(10, 10, 150, 40);
+Button showTrangleButton(10, 60, 150, 40);
 
 void testClickBtn(){
     FileLog::getInstance()->init();

@@ -15,10 +15,10 @@ Button::Button(int left, int top, int width, int height){
     this->width = width;
     this->height = height;
     
-        // initial text color as white.
-    textColor[0] = 0xff;
-    textColor[1] = 0xff;
-    textColor[2] = 0xff;
+        // initial text color as black.
+    textColor[0] = 0x0;
+    textColor[1] = 0x0;
+    textColor[2] = 0x0;
 }
 
 void Button::display(){
@@ -41,7 +41,7 @@ void Button::drawText(){
     glColor3ub(textColor[0], textColor[1], textColor[2]);
     
     int realLeft = left;
-    int realTop = real_h - top;
+    int realTop = real_h -( top + FreeType2::FONT_SIZE_H /2 + height/2);
     if(NULL!=text){
         FreeType2::getInstance()->print(realLeft, realTop, text);
     }// end if
