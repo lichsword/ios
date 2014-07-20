@@ -14,11 +14,10 @@
 surfaceview::surfaceview_data our_surface;
 Button showFreetypeButton(50, 50, 100, 40);
 Button showTrangleButton(50, 100, 100, 40);
-filelog::filelog_data our_log;
 
 void testClickBtn(){
-    our_log.init();
-    our_log.e("press test click btn");
+    FileLog::getInstance()->init();
+    FileLog::getInstance()->e("press test click btn");
 }
 
 Scene::Scene(){

@@ -8,25 +8,25 @@
 
 #include "FileLog.h"
 
-namespace filelog {
-    
-    void filelog_data::init(){
-        lpFile = fopen(PATH, "w+");
-        if(NULL == lpFile){
-                // log error.
-        }// end if
-    }
-    
-    void filelog_data::e(char * log){
-        if(NULL!=lpFile){
-            fputs(log, lpFile);
-            fflush(lpFile);
-        }// end if
-    }
-    
-    void filelog_data::release(){
-        if(NULL!=lpFile){
-            fclose(lpFile);
-        }// end if
-    }
+FileLog * FileLog::sInstance = NULL;
+char FileLog::PATH[] = "/Users/lichsword/Documents/workspace_apple/iOS/Graph3D/out/log.txt";
+
+void FileLog::init(){
+    lpFile = fopen(FileLog::PATH, "w+");
+    if(NULL == lpFile){
+            // log error.
+    }// end if
+}
+
+void FileLog::e(char * log){
+    if(NULL!=lpFile){
+        fputs(log, lpFile);
+        fflush(lpFile);
+    }// end if
+}
+
+void FileLog::release(){
+    if(NULL!=lpFile){
+        fclose(lpFile);
+    }// end if
 }

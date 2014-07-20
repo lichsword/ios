@@ -20,19 +20,21 @@
     //STL异常类
 #include <stdexcept>
 
-namespace filelog {
-    using std::vector;
-    using std::string;
-    
-    const char PATH[] = "/Users/lichsword/Documents/workspace_apple/iOS/Graph3D/out/log.txt";
-    
-    struct filelog_data{
-        FILE * lpFile;
-
-        void init();
-        void e(char * log);
-        void release();
-    };
-}
+class FileLog{
+public:
+    static FileLog * getInstance(){
+        if(NULL==sInstance){
+            sInstance = new FileLog();
+        }// end if
+        return sInstance;
+    }
+    void init();
+    void e(char * log);
+    void release();
+private:
+    static FileLog * sInstance;
+    static char PATH[];
+    FILE * lpFile;
+};
 
 #endif /* defined(__Graph3D__FileLog__) */
