@@ -13,12 +13,6 @@
 
 #include<stdlib.h>
 #include<stdio.h>
-//#include<unistd.h>
-//#include<string.h>
-//#include<fcntl.h>
-//#include<limits.h>
-//#include<sys/types.h>
-//#include<sys/stat.h>
     //STL 头文件
 #include <vector>
 #include <string>

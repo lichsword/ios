@@ -28,6 +28,9 @@
     //STL异常类
 #include <stdexcept>
 
+const char FONT_PATH[] = "/Library/Fonts/Arial.ttf";
+const int FONT_SIZE_H = 16;
+
 namespace freeType2{
         // 使用vector和string名字空间
     using std::vector;

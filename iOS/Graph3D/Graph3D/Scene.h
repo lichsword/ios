@@ -12,6 +12,7 @@
 #include <iostream>
 
 class Scene{
+
 public:
     Scene();
     void onCreate();

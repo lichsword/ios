@@ -6,11 +6,13 @@
     //  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
     //
 #include "Main.h"
+#include "Test.h"
 #include "FileLog.h"
 #include "FreeType2.h"
 #include "Scene.h"
 //#include "Screen.h"
-#include "Button.h"
+//#include "Button.h"
+
 
     // mac 的屏幕大小
 int SCREEN_W = 1280;
@@ -62,6 +64,7 @@ GLvoid glPrint(const char *fmt, ...){
 void initApp(){
 //    our_log.init();
     our_scene.init();
+
 }
 
 void display()
@@ -136,6 +139,8 @@ void entry(int state){
 
 int main(int argc, char ** argv)
 {
+    Test::getInstance();
+    
     glutInit(&argc, argv);
     glutCreateWindow("Xcode Glut Demo");
     glutReshapeWindow(WIN_W, WIN_H);

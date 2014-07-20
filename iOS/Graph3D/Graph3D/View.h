@@ -10,6 +10,7 @@
 #define __Graph3D__View__
 
 #include <iostream>
+#include "FreeType2.h"
 
 class View{
 private:
@@ -22,6 +23,7 @@ protected:
     int height;
     
     int pressed;
+    
 public:
     View();
     ~View();

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		840A911619727B6E00551A3C /* libFreetype2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A911519727B6E00551A3C /* libFreetype2.a */; };
+		841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841B859F197B7B5A009BECD0 /* Test.cpp */; };
 		844F0AE019751153003A78DE /* FreeType2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0ADE19751153003A78DE /* FreeType2.cpp */; };
 		844F0AE319752A17003A78DE /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AE119752A17003A78DE /* Button.cpp */; };
 		844F0AE619752D06003A78DE /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AE419752D06003A78DE /* Screen.cpp */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		840A911519727B6E00551A3C /* libFreetype2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreetype2.a; path = ../Libs/libFreetype2.a; sourceTree = "<group>"; };
+		841B859F197B7B5A009BECD0 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		841B85A0197B7B5A009BECD0 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		844F0ADE19751153003A78DE /* FreeType2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FreeType2.cpp; sourceTree = "<group>"; };
 		844F0ADF19751153003A78DE /* FreeType2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeType2.h; sourceTree = "<group>"; };
 		844F0AE119752A17003A78DE /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				8462577B1971598000096DB0 /* Main.h */,
 				844F0AE419752D06003A78DE /* Screen.cpp */,
 				844F0AE519752D06003A78DE /* Screen.h */,
+				841B859F197B7B5A009BECD0 /* Test.cpp */,
+				841B85A0197B7B5A009BECD0 /* Test.h */,
 			);
 			path = Graph3D;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */,
 				844F0AEC1976604E003A78DE /* Scene.cpp in Sources */,
 				844F0AE019751153003A78DE /* FreeType2.cpp in Sources */,
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,

@@ -19,15 +19,19 @@ Button::Button(int left, int top, int width, int height){
 void Button::display(){
     glPushMatrix();
     
-        // 白色文字
+        // --draw bg.
+        // choose color.
     if(pressed){
-        glColor3ub(0, 0xff, 0);
+        glColor3ub(0, 0xff, 0);// green
     }else{
-        glColor3ub(0xff, 0, 0);
+        glColor3ub(0xff, 0, 0);// red
     }
+    
+        // count area.
     SCREENPOSITION screen_position;
     map(&screen_position, left, top, width, height);
     
+        // -draw start
     glLoadIdentity();
     glBegin(GL_POLYGON);
     
@@ -37,6 +41,8 @@ void Button::display(){
     glVertex2f(screen_position.left, screen_position.bottom);
     
     glEnd();
+        // -draw end
+        // --draw bg end.
     
     glPopMatrix();
 }
