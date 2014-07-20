@@ -39,7 +39,6 @@ const int real_h = 600;
 const int half_w = real_w /2;
 const int half_h = real_h /2;
 
-
 int map(LPSCREENPOSITION pos, int left, int top, int width, int height);
 
 #endif /* defined(__Graph3D__Screen__) */
