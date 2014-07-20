@@ -104,9 +104,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841B859C197B6C96009BECD0 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				844F0AEA1976604E003A78DE /* Scene.cpp */,
+				844F0AEB1976604E003A78DE /* Scene.h */,
+			);
+			name = scene;
+			sourceTree = "<group>";
+		};
+		841B859D197B6CA3009BECD0 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				844F0ADE19751153003A78DE /* FreeType2.cpp */,
+				844F0ADF19751153003A78DE /* FreeType2.h */,
+			);
+			name = res;
+			sourceTree = "<group>";
+		};
+		841B859E197B6CB1009BECD0 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				844F0AE719754EDE003A78DE /* FileLog.cpp */,
+				844F0AE819754EDE003A78DE /* FileLog.h */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		844F0AF51977EB43003A78DE /* view */ = {
 			isa = PBXGroup;
 			children = (
+				844F0AED1976A906003A78DE /* SurfaceView.cpp */,
+				844F0AEE1976A906003A78DE /* SurfaceView.h */,
+				844F0AE119752A17003A78DE /* Button.cpp */,
+				844F0AE219752A17003A78DE /* Button.h */,
 				844F0AF11977EB34003A78DE /* View.cpp */,
 				844F0AF21977EB34003A78DE /* View.h */,
 			);
@@ -159,24 +190,17 @@
 		84625746197158AA00096DB0 /* Graph3D */ = {
 			isa = PBXGroup;
 			children = (
+				841B859E197B6CB1009BECD0 /* util */,
+				841B859D197B6CA3009BECD0 /* res */,
+				841B859C197B6C96009BECD0 /* scene */,
 				844F0AF51977EB43003A78DE /* view */,
 				84625755197158AA00096DB0 /* MainMenu.xib */,
 				84625758197158AA00096DB0 /* Images.xcassets */,
 				84625747197158AA00096DB0 /* Supporting Files */,
 				8462577A1971598000096DB0 /* Main.cpp */,
 				8462577B1971598000096DB0 /* Main.h */,
-				844F0ADE19751153003A78DE /* FreeType2.cpp */,
-				844F0ADF19751153003A78DE /* FreeType2.h */,
-				844F0AE119752A17003A78DE /* Button.cpp */,
-				844F0AE219752A17003A78DE /* Button.h */,
 				844F0AE419752D06003A78DE /* Screen.cpp */,
 				844F0AE519752D06003A78DE /* Screen.h */,
-				844F0AE719754EDE003A78DE /* FileLog.cpp */,
-				844F0AE819754EDE003A78DE /* FileLog.h */,
-				844F0AEA1976604E003A78DE /* Scene.cpp */,
-				844F0AEB1976604E003A78DE /* Scene.h */,
-				844F0AED1976A906003A78DE /* SurfaceView.cpp */,
-				844F0AEE1976A906003A78DE /* SurfaceView.h */,
 			);
 			path = Graph3D;
 			sourceTree = "<group>";
