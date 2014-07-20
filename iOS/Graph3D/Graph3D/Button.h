@@ -26,8 +26,14 @@
 class Button : public View{
 public:
     Button(int left, int top, int width, int height);
-    void setText(const char *);
-//    virtual void display();
+    void setText(char *);
+        void setTextColor(GLubyte color[3]);
+    virtual void display();
+private:
+    void drawText();
+private:
+    char * text;
+    GLubyte textColor[3];
 };
 
 #endif /* defined(__Graph3D__Button__) */

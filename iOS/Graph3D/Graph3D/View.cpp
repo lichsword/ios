@@ -21,6 +21,10 @@ View::~View(){
 }
 
 void View::display(){
+    drawBg();
+}
+
+void View::drawBg(){
     glPushMatrix();
     
         // --draw bg.

@@ -27,7 +27,8 @@ public:
 private:
     void (* onClickFunc)(void);
     void onClick();
-    
+protected:
+    void drawBg();
 protected:
     int left;
     int top;
