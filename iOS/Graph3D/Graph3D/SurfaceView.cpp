@@ -10,14 +10,12 @@
 #include "FreeType2.h"
 
 namespace surfaceview {
-    freeType2::font_data our_font;
-    
     GLuint  base;
     GLfloat	cnt1;			// 字体移动计数器1
     GLfloat	cnt2;			// 字体移动计数器2
     
     void surfaceview_data::init(){
-        our_font.init("/Library/Fonts/Arial.ttf", 16);
+        
     }
     
     void surfaceview_data::display(){
@@ -30,7 +28,7 @@ namespace surfaceview {
         glScalef(1,.8+.3*cos(cnt1/5),1);
         glTranslatef(-180,0,0);
             //绘制freetype文字
-        freeType2::print(our_font, 300, 200, "Active FreeType Text- %7.2f", cnt1);
+        FreeType2::getInstance()->print(300, 200, "Active FreeType Text- %7.2f", cnt1);
         glPopMatrix();
         
         cnt1+=2.0f;

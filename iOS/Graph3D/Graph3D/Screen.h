@@ -1,10 +1,11 @@
-//
-//  Screen.h
-//  Graph3D
-//
-//  Created by 王 岳 on 14-7-15.
-//  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
-//
+    //
+    //  Screen.h
+    //  Graph3D
+    //
+    //  Created by 王 岳 on 14-7-15.
+    //  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
+    //
+    //  目前使用C风格，等接口多了以后，就重构为C++的单例
 
 #ifndef __Graph3D__Screen__
 #define __Graph3D__Screen__
