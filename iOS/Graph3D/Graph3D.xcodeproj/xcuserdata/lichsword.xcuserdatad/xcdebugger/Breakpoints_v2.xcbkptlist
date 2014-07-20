@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Graph3D/Screen.cpp"
-            timestampString = "427120793.160419"
+            timestampString = "427518510.414602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
             endingLineNumber = "16"
-            landmarkName = "Screen::map(LPSCREENPOSITION pos, int left, int top, int width, int height)"
-            landmarkType = "5">
+            landmarkName = "map(LPSCREENPOSITION pos, int left, int top, int width, int height)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

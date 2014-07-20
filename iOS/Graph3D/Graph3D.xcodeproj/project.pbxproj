@@ -412,6 +412,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -449,6 +450,7 @@
 					"/Users/lichsword/Documents/workspace_apple/others/freetype2-ios/include/**",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -537,7 +539,7 @@
 				8462576D197158AA00096DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		8462576E197158AA00096DB0 /* Build configuration list for PBXNativeTarget "Graph3D" */ = {
 			isa = XCConfigurationList;
@@ -546,7 +548,7 @@
 				84625770197158AA00096DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		84625771197158AA00096DB0 /* Build configuration list for PBXNativeTarget "Graph3DTests" */ = {
 			isa = XCConfigurationList;
@@ -555,7 +557,7 @@
 				84625773197158AA00096DB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,7 +13,7 @@
 
 class Scene{
 public:
-    Scene(int param);
+    Scene();
     void onCreate();
     void onDestrory();
     void init();

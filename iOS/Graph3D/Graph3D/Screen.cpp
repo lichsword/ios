@@ -8,10 +8,7 @@
 
 #include "Screen.h"
 
-Screen::Screen(){
-}
-
-int Screen::map(LPSCREENPOSITION pos, int left, int top, int width, int height){
+int map(LPSCREENPOSITION pos, int left, int top, int width, int height){
     int result = 0;
     
     pos->left = virtual_left +(float)left / (float)half_w;

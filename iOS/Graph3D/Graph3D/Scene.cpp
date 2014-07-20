@@ -20,7 +20,7 @@ filelog::filelog_data our_log;
 //    our_log.e("press test click btn");
 //}
 
-Scene::Scene(int param){
+Scene::Scene(){
     
 }
 

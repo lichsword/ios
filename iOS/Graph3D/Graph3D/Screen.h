@@ -26,34 +26,20 @@ typedef struct{
 }SCREENPOSITION;
 typedef  SCREENPOSITION * LPSCREENPOSITION;
 
-class Screen {
-private:
-    static Screen * sInstance;
-    Screen();
-public:
-    static Screen* getInstance(){
-        if(NULL==sInstance){
-            sInstance = new Screen();
-        }// end if
-        return sInstance;
-    }
-    
-    const float virtual_left = -1.0f;
-    const float virtual_top = 1.0;
-    const float virtual_right = 1.0;
-    const float virtual_bottom = -1.0;
-    
-    const float virtualWidth = virtual_right - virtual_left;
-    const float virtualHeight = virtual_bottom - virtual_top;
-    
-    const int real_w = 800;
-    const int real_h = 600;
-    const int half_w = real_w /2;
-    const int half_h = real_h /2;
+const float virtual_left = -1.0f;
+const float virtual_top = 1.0;
+const float virtual_right = 1.0;
+const float virtual_bottom = -1.0;
 
-    int map(LPSCREENPOSITION pos, int left, int top, int width, int height);
-};
+const float virtualWidth = virtual_right - virtual_left;
+const float virtualHeight = virtual_bottom - virtual_top;
 
-Screen * Screen::sInstance=NULL;
+const int real_w = 800;
+const int real_h = 600;
+const int half_w = real_w /2;
+const int half_h = real_h /2;
+
+
+int map(LPSCREENPOSITION pos, int left, int top, int width, int height);
 
 #endif /* defined(__Graph3D__Screen__) */
