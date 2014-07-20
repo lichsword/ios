@@ -33,8 +33,8 @@ void Scene::init(){
     showFreetypeButton.setOnClickListener(testClickBtn);
     showTrangleButton.setText("show triangle");
     showTrangleButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
-                                 new GLubyte[3]{0, 0xff, 0x80},
-                                 new GLubyte[3]{0, 0xff, 0x80}
+                                 new GLubyte[3]{0, 0x75, 0x5e},
+                                 new GLubyte[3]{0xac, 0xe1, 0xaf}
                                  );
     showTrangleButton.setOnClickListener(testClickBtn);
     our_surface.init();
