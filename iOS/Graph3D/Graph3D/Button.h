@@ -27,7 +27,7 @@ class Button : public View{
 public:
     Button(int left, int top, int width, int height);
     void setText(const char *);
-    virtual void display();
+//    virtual void display();
 };
 
 #endif /* defined(__Graph3D__Button__) */

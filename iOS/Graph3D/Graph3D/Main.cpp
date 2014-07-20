@@ -116,12 +116,12 @@ void mouse(int button , int state, int x, int y){
 
 /* 鼠标移动，且有按钮被按下 */
 void motion(int x, int y){
-    
+    our_scene.onMotion(x, y);
 }
 
 /* 鼠标移动，无论是否有按钮按下 */
 void passiveMotion(int x, int y){
-    
+    our_scene.onPassiveMotion(x, y);
 }
 
 void entry(int state){
