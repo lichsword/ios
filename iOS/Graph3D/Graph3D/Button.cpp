@@ -26,13 +26,9 @@ void Button::display(){
         glColor3ub(0xff, 0, 0);
     }
     SCREENPOSITION screen_position;
-//    Screen * lpScreen = Screen::getInstance();
-//    lpScreen->map(&screen_position, left, top, width, height);
     map(&screen_position, left, top, width, height);
     
     glLoadIdentity();
-        //      glEnable(GL_FLAT);
-        //      glTranslatef(0.0f,0.0f,-1.0f);
     glBegin(GL_POLYGON);
     
     glVertex2f(screen_position.left, screen_position.top);
