@@ -102,27 +102,27 @@ void View::onMouseEvent(int button, int state, int x, int y){
     memset(buffer, 0, 1024);
     sprintf(buffer, "button=%d, state=%d, x=%d, y=%d", button, state, x, y);
     FileLog::getInstance()->e(buffer);
-//    if(inArea(x, y)){
-//        switch (state) {
+    if(inArea(x, y)){
+        switch (state) {
 //            case GLUT_DOWN:
 //                pressed = 1;
 //                hover = 0;
 //                break;
-//            case GLUT_UP:
+            case GLUT_UP:
 //                if(pressed){// 之前是按下状态
-//                    onClick();
+                    onClick();
 //                }// end if
 //                pressed = 0;
 //                hover = 1;
-//                break;
+                break;
 //            default:
 //                break;
-//        }
-//        
+        }
+//
 //        
 //    }else{
 //        pressed = 0;
-//    }
+    }
 }
 
 void View::onMotion(int x, int y){

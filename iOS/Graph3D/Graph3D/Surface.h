@@ -15,22 +15,14 @@
 #include <OpenGL/glu.h>
 #include <GLUT/Glut.h>
     //STL 头文件
-#include <vector>
-#include <string>
 #include <math.h>
     //STL异常类
 #include <stdexcept>
 
-namespace surfaceview {
-    using std::vector;
-    using std::string;
-    
-    struct surfaceview_data{
+class Surface{
+public:
+    virtual void onStart();
+    virtual void display();
+};
 
-        void init();
-        
-        void display();
-
-    };
-}
 #endif /* defined(__Graph3D__SurfaceView__) */

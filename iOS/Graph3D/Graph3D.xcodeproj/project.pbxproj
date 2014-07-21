@@ -14,7 +14,7 @@
 		844F0AE619752D06003A78DE /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AE419752D06003A78DE /* Screen.cpp */; };
 		844F0AE919754EDE003A78DE /* FileLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AE719754EDE003A78DE /* FileLog.cpp */; };
 		844F0AEC1976604E003A78DE /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AEA1976604E003A78DE /* Scene.cpp */; };
-		844F0AEF1976A906003A78DE /* SurfaceView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AED1976A906003A78DE /* SurfaceView.cpp */; };
+		844F0AEF1976A906003A78DE /* Surface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AED1976A906003A78DE /* Surface.cpp */; };
 		844F0AF31977EB34003A78DE /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AF11977EB34003A78DE /* View.cpp */; };
 		84625741197158AA00096DB0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84625740197158AA00096DB0 /* Cocoa.framework */; };
 		8462574B197158AA00096DB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84625749197158AA00096DB0 /* InfoPlist.strings */; };
@@ -29,6 +29,9 @@
 		846257771971591200096DB0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846257761971591200096DB0 /* GLUT.framework */; };
 		846257791971595B00096DB0 /* libGLTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 846257781971595B00096DB0 /* libGLTools.a */; };
 		8462577C1971598000096DB0 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8462577A1971598000096DB0 /* Main.cpp */; };
+		849286CC197D3709000A147E /* Surface_01_BaseWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286CA197D3709000A147E /* Surface_01_BaseWindow.cpp */; };
+		849286D0197D399F000A147E /* Surface_02_Quads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286CE197D399F000A147E /* Surface_02_Quads.cpp */; };
+		849286D3197D3A38000A147E /* Surface_03_Colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286D1197D3A38000A147E /* Surface_03_Colors.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +58,8 @@
 		844F0AE819754EDE003A78DE /* FileLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileLog.h; sourceTree = "<group>"; };
 		844F0AEA1976604E003A78DE /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		844F0AEB1976604E003A78DE /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
-		844F0AED1976A906003A78DE /* SurfaceView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SurfaceView.cpp; sourceTree = "<group>"; };
-		844F0AEE1976A906003A78DE /* SurfaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurfaceView.h; sourceTree = "<group>"; };
+		844F0AED1976A906003A78DE /* Surface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface.cpp; sourceTree = "<group>"; };
+		844F0AEE1976A906003A78DE /* Surface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface.h; sourceTree = "<group>"; };
 		844F0AF11977EB34003A78DE /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
 		844F0AF21977EB34003A78DE /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		8462573D197158AA00096DB0 /* Graph3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,12 @@
 		846257781971595B00096DB0 /* libGLTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLTools.a; path = ../Libs/libGLTools.a; sourceTree = "<group>"; };
 		8462577A1971598000096DB0 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 		8462577B1971598000096DB0 /* Main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
+		849286CA197D3709000A147E /* Surface_01_BaseWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_01_BaseWindow.cpp; sourceTree = "<group>"; };
+		849286CB197D3709000A147E /* Surface_01_BaseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_01_BaseWindow.h; sourceTree = "<group>"; };
+		849286CE197D399F000A147E /* Surface_02_Quads.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_02_Quads.cpp; sourceTree = "<group>"; };
+		849286CF197D399F000A147E /* Surface_02_Quads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_02_Quads.h; sourceTree = "<group>"; };
+		849286D1197D3A38000A147E /* Surface_03_Colors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_03_Colors.cpp; sourceTree = "<group>"; };
+		849286D2197D3A38000A147E /* Surface_03_Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_03_Colors.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +146,6 @@
 		844F0AF51977EB43003A78DE /* view */ = {
 			isa = PBXGroup;
 			children = (
-				844F0AED1976A906003A78DE /* SurfaceView.cpp */,
-				844F0AEE1976A906003A78DE /* SurfaceView.h */,
 				844F0AE119752A17003A78DE /* Button.cpp */,
 				844F0AE219752A17003A78DE /* Button.h */,
 				844F0AF11977EB34003A78DE /* View.cpp */,
@@ -193,6 +200,7 @@
 		84625746197158AA00096DB0 /* Graph3D */ = {
 			isa = PBXGroup;
 			children = (
+				849286CD197D394E000A147E /* surface */,
 				841B859E197B6CB1009BECD0 /* util */,
 				841B859D197B6CA3009BECD0 /* res */,
 				841B859C197B6C96009BECD0 /* scene */,
@@ -237,6 +245,21 @@
 				84625767197158AA00096DB0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		849286CD197D394E000A147E /* surface */ = {
+			isa = PBXGroup;
+			children = (
+				844F0AED1976A906003A78DE /* Surface.cpp */,
+				844F0AEE1976A906003A78DE /* Surface.h */,
+				849286CA197D3709000A147E /* Surface_01_BaseWindow.cpp */,
+				849286CB197D3709000A147E /* Surface_01_BaseWindow.h */,
+				849286CE197D399F000A147E /* Surface_02_Quads.cpp */,
+				849286CF197D399F000A147E /* Surface_02_Quads.h */,
+				849286D1197D3A38000A147E /* Surface_03_Colors.cpp */,
+				849286D2197D3A38000A147E /* Surface_03_Colors.h */,
+			);
+			name = surface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,11 +362,14 @@
 			files = (
 				841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */,
 				844F0AEC1976604E003A78DE /* Scene.cpp in Sources */,
+				849286D3197D3A38000A147E /* Surface_03_Colors.cpp in Sources */,
 				844F0AE019751153003A78DE /* FreeType2.cpp in Sources */,
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,
+				849286CC197D3709000A147E /* Surface_01_BaseWindow.cpp in Sources */,
+				849286D0197D399F000A147E /* Surface_02_Quads.cpp in Sources */,
 				844F0AE319752A17003A78DE /* Button.cpp in Sources */,
 				844F0AF31977EB34003A78DE /* View.cpp in Sources */,
-				844F0AEF1976A906003A78DE /* SurfaceView.cpp in Sources */,
+				844F0AEF1976A906003A78DE /* Surface.cpp in Sources */,
 				844F0AE919754EDE003A78DE /* FileLog.cpp in Sources */,
 				844F0AE619752D06003A78DE /* Screen.cpp in Sources */,
 			);

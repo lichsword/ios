@@ -144,7 +144,8 @@ int main(int argc, char ** argv)
     glutInit(&argc, argv);
     glutCreateWindow("Xcode Glut Demo");
     glutReshapeWindow(WIN_W, WIN_H);
-    glutPositionWindow((SCREEN_W- WIN_W)/2,(SCREEN_H - WIN_H)/2);
+    glutPositionWindow((SCREEN_W- WIN_W)/2, (SCREEN_H - WIN_H)/2);
+        //    glutPositionWindow((SCREEN_W- WIN_W)/2 + 400,(SCREEN_H - WIN_H)/2 + 400);
     glutDisplayFunc(display);
     glutKeyboardFunc(keyboard);
     glutMouseFunc(mouse);

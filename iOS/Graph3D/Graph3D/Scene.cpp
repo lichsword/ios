@@ -9,15 +9,34 @@
 #include "FileLog.h"
 #include "Scene.h"
 #include "Button.h"
-#include "SurfaceView.h"
+#include "Surface_01_BaseWindow.h"
+#include "Surface_02_Quads.h"
+#include "Surface_03_Colors.h"
 
-surfaceview::surfaceview_data our_surface;
 Button showFreetypeButton(10, 10, 150, 40);
 Button showTrangleButton(10, 60, 150, 40);
+Button showColorButton(10, 110, 150, 40);
+    // surfaces
+Surface * currentSurface;
+BaseWindowSurface baseWindowSurface;
+QuadsSurface quadsSurface;
+ColorsSurface colorsSurface;
 
-void testClickBtn(){
-    FileLog::getInstance()->init();
-    FileLog::getInstance()->e("press test click btn");
+void choose01(){
+//    FileLog::getInstance()->init();
+//    FileLog::getInstance()->e("press test click btn");
+    currentSurface = &baseWindowSurface;
+    currentSurface->onStart();
+}
+
+void choose02(){
+    currentSurface = &quadsSurface;
+    currentSurface->onStart();
+}
+
+void choose03(){
+    currentSurface = &colorsSurface;
+    currentSurface->onStart();
 }
 
 Scene::Scene(){
@@ -30,14 +49,19 @@ void Scene::init(){
                                   new GLubyte[3]{0, 0x75, 0x5e},
                                   new GLubyte[3]{0xac, 0xe1, 0xaf}
                                   );
-    showFreetypeButton.setOnClickListener(testClickBtn);
+    showFreetypeButton.setOnClickListener(choose01);
     showTrangleButton.setText("show triangle");
     showTrangleButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
                                  new GLubyte[3]{0, 0x75, 0x5e},
                                  new GLubyte[3]{0xac, 0xe1, 0xaf}
                                  );
-    showTrangleButton.setOnClickListener(testClickBtn);
-    our_surface.init();
+    showTrangleButton.setOnClickListener(choose02);
+    showColorButton.setText("show colors");
+    showColorButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
+                               new GLubyte[3]{0, 0x75, 0x5e},
+                               new GLubyte[3]{0xac, 0xe1, 0xaf}
+                               );
+    showColorButton.setOnClickListener(choose03);
 }
 
 void Scene::finish(){
@@ -55,22 +79,28 @@ void Scene::onDestrory(){
 void Scene::display(){
     showFreetypeButton.display();
     showTrangleButton.display();
-    our_surface.display();
+    showColorButton.display();
+    if(NULL!=currentSurface){
+        currentSurface->display();
+    }// end if
 }
 
 void Scene::onMouseEvent(int button, int state, int x, int y){
     showFreetypeButton.onMouseEvent(button, state, x, y);
     showTrangleButton.onMouseEvent(button, state, x, y);
+    showColorButton.onMouseEvent(button, state, x, y);
 }
 
 void Scene::onMotion(int x, int y){
     showFreetypeButton.onMotion(x, y);
     showTrangleButton.onMotion(x, y);
+    showColorButton.onMotion(x, y);
 }
 
 void Scene::onPassiveMotion(int x, int y){
     showFreetypeButton.onPassiveMotion(x, y);
     showTrangleButton.onPassiveMotion(x, y);
+    showColorButton.onPassiveMotion(x, y);
 }
 
 void Scene::onEntry(int state){
