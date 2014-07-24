@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
 //
 
-#ifndef __Graph3D__BaseWindowSurface__
-#define __Graph3D__BaseWindowSurface__
+#ifndef __Graph3D__Surface_01_BaseWindow__
+#define __Graph3D__Surface_01_BaseWindow__
 
 #include <iostream>
 #include "Surface.h"
@@ -17,4 +17,4 @@ public:
     virtual void display();
 };
 
-#endif /* defined(__Graph3D__BaseWindowSurface__) */
+#endif /* defined(__Graph3D__Surface_01_BaseWindow__) */

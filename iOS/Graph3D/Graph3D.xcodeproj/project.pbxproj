@@ -32,6 +32,7 @@
 		849286CC197D3709000A147E /* Surface_01_BaseWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286CA197D3709000A147E /* Surface_01_BaseWindow.cpp */; };
 		849286D0197D399F000A147E /* Surface_02_Quads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286CE197D399F000A147E /* Surface_02_Quads.cpp */; };
 		849286D3197D3A38000A147E /* Surface_03_Colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286D1197D3A38000A147E /* Surface_03_Colors.cpp */; };
+		849286D7197D6BEE000A147E /* Surface_04_Rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286D5197D6BEE000A147E /* Surface_04_Rotate.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		849286CF197D399F000A147E /* Surface_02_Quads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_02_Quads.h; sourceTree = "<group>"; };
 		849286D1197D3A38000A147E /* Surface_03_Colors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_03_Colors.cpp; sourceTree = "<group>"; };
 		849286D2197D3A38000A147E /* Surface_03_Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_03_Colors.h; sourceTree = "<group>"; };
+		849286D5197D6BEE000A147E /* Surface_04_Rotate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_04_Rotate.cpp; sourceTree = "<group>"; };
+		849286D6197D6BEE000A147E /* Surface_04_Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_04_Rotate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +261,8 @@
 				849286CF197D399F000A147E /* Surface_02_Quads.h */,
 				849286D1197D3A38000A147E /* Surface_03_Colors.cpp */,
 				849286D2197D3A38000A147E /* Surface_03_Colors.h */,
+				849286D5197D6BEE000A147E /* Surface_04_Rotate.cpp */,
+				849286D6197D6BEE000A147E /* Surface_04_Rotate.h */,
 			);
 			name = surface;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			files = (
 				841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */,
 				844F0AEC1976604E003A78DE /* Scene.cpp in Sources */,
+				849286D7197D6BEE000A147E /* Surface_04_Rotate.cpp in Sources */,
 				849286D3197D3A38000A147E /* Surface_03_Colors.cpp in Sources */,
 				844F0AE019751153003A78DE /* FreeType2.cpp in Sources */,
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,
