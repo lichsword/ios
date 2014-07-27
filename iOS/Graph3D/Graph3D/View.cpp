@@ -28,6 +28,7 @@ void View::drawBg(){
     glPushMatrix();
     
         // --draw bg.
+    glClear(GL_COLOR);
         // choose color.
     if(pressed){
         glColor3ub(bgColorPressed[0], bgColorPressed[1], bgColorPressed[2]);

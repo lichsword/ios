@@ -13,6 +13,9 @@
 #include "Surface.h"
 
 class RotateSurface : public Surface{
+private:
+    GLfloat rotTri;
+    GLfloat rotQuad;
 public:
     virtual void onStart();
     virtual void display();

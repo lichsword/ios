@@ -33,6 +33,10 @@
 		849286D0197D399F000A147E /* Surface_02_Quads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286CE197D399F000A147E /* Surface_02_Quads.cpp */; };
 		849286D3197D3A38000A147E /* Surface_03_Colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286D1197D3A38000A147E /* Surface_03_Colors.cpp */; };
 		849286D7197D6BEE000A147E /* Surface_04_Rotate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849286D5197D6BEE000A147E /* Surface_04_Rotate.cpp */; };
+		8498AE2D1984F2AF00E81EBD /* image_bitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8498AE2B1984F2AF00E81EBD /* image_bitmap.cpp */; };
+		8498AE301984F76700E81EBD /* Surface_06_TextureMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8498AE2E1984F76700E81EBD /* Surface_06_TextureMap.cpp */; };
+		8498AE3319852CBB00E81EBD /* NeHe.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 8498AE3219852CBB00E81EBD /* NeHe.bmp */; };
+		84C741161981518500E055C5 /* Surface_05_Cube3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C741141981518500E055C5 /* Surface_05_Cube3D.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,13 @@
 		849286D2197D3A38000A147E /* Surface_03_Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_03_Colors.h; sourceTree = "<group>"; };
 		849286D5197D6BEE000A147E /* Surface_04_Rotate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_04_Rotate.cpp; sourceTree = "<group>"; };
 		849286D6197D6BEE000A147E /* Surface_04_Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_04_Rotate.h; sourceTree = "<group>"; };
+		8498AE2B1984F2AF00E81EBD /* image_bitmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image_bitmap.cpp; sourceTree = "<group>"; };
+		8498AE2C1984F2AF00E81EBD /* image_bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_bitmap.h; sourceTree = "<group>"; };
+		8498AE2E1984F76700E81EBD /* Surface_06_TextureMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_06_TextureMap.cpp; sourceTree = "<group>"; };
+		8498AE2F1984F76700E81EBD /* Surface_06_TextureMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_06_TextureMap.h; sourceTree = "<group>"; };
+		8498AE3219852CBB00E81EBD /* NeHe.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = NeHe.bmp; sourceTree = "<group>"; };
+		84C741141981518500E055C5 /* Surface_05_Cube3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_05_Cube3D.cpp; sourceTree = "<group>"; };
+		84C741151981518500E055C5 /* Surface_05_Cube3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_05_Cube3D.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,13 +139,13 @@
 			name = scene;
 			sourceTree = "<group>";
 		};
-		841B859D197B6CA3009BECD0 /* res */ = {
+		841B859D197B6CA3009BECD0 /* font */ = {
 			isa = PBXGroup;
 			children = (
 				844F0ADE19751153003A78DE /* FreeType2.cpp */,
 				844F0ADF19751153003A78DE /* FreeType2.h */,
 			);
-			name = res;
+			name = font;
 			sourceTree = "<group>";
 		};
 		841B859E197B6CB1009BECD0 /* util */ = {
@@ -203,9 +214,11 @@
 		84625746197158AA00096DB0 /* Graph3D */ = {
 			isa = PBXGroup;
 			children = (
+				8498AE3119852BD200E81EBD /* assets */,
+				8498AE2A1984F27A00E81EBD /* model */,
 				849286CD197D394E000A147E /* surface */,
 				841B859E197B6CB1009BECD0 /* util */,
-				841B859D197B6CA3009BECD0 /* res */,
+				841B859D197B6CA3009BECD0 /* font */,
 				841B859C197B6C96009BECD0 /* scene */,
 				844F0AF51977EB43003A78DE /* view */,
 				84625755197158AA00096DB0 /* MainMenu.xib */,
@@ -263,8 +276,29 @@
 				849286D2197D3A38000A147E /* Surface_03_Colors.h */,
 				849286D5197D6BEE000A147E /* Surface_04_Rotate.cpp */,
 				849286D6197D6BEE000A147E /* Surface_04_Rotate.h */,
+				84C741141981518500E055C5 /* Surface_05_Cube3D.cpp */,
+				84C741151981518500E055C5 /* Surface_05_Cube3D.h */,
+				8498AE2E1984F76700E81EBD /* Surface_06_TextureMap.cpp */,
+				8498AE2F1984F76700E81EBD /* Surface_06_TextureMap.h */,
 			);
 			name = surface;
+			sourceTree = "<group>";
+		};
+		8498AE2A1984F27A00E81EBD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8498AE2B1984F2AF00E81EBD /* image_bitmap.cpp */,
+				8498AE2C1984F2AF00E81EBD /* image_bitmap.h */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		8498AE3119852BD200E81EBD /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				8498AE3219852CBB00E81EBD /* NeHe.bmp */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +381,7 @@
 				84625759197158AA00096DB0 /* Images.xcassets in Resources */,
 				84625751197158AA00096DB0 /* Credits.rtf in Resources */,
 				84625757197158AA00096DB0 /* MainMenu.xib in Resources */,
+				8498AE3319852CBB00E81EBD /* NeHe.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,14 +403,17 @@
 				841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */,
 				844F0AEC1976604E003A78DE /* Scene.cpp in Sources */,
 				849286D7197D6BEE000A147E /* Surface_04_Rotate.cpp in Sources */,
+				8498AE2D1984F2AF00E81EBD /* image_bitmap.cpp in Sources */,
 				849286D3197D3A38000A147E /* Surface_03_Colors.cpp in Sources */,
 				844F0AE019751153003A78DE /* FreeType2.cpp in Sources */,
+				8498AE301984F76700E81EBD /* Surface_06_TextureMap.cpp in Sources */,
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,
 				849286CC197D3709000A147E /* Surface_01_BaseWindow.cpp in Sources */,
 				849286D0197D399F000A147E /* Surface_02_Quads.cpp in Sources */,
 				844F0AE319752A17003A78DE /* Button.cpp in Sources */,
 				844F0AF31977EB34003A78DE /* View.cpp in Sources */,
 				844F0AEF1976A906003A78DE /* Surface.cpp in Sources */,
+				84C741161981518500E055C5 /* Surface_05_Cube3D.cpp in Sources */,
 				844F0AE919754EDE003A78DE /* FileLog.cpp in Sources */,
 				844F0AE619752D06003A78DE /* Screen.cpp in Sources */,
 			);

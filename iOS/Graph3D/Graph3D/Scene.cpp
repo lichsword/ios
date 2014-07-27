@@ -13,17 +13,23 @@
 #include "Surface_02_Quads.h"
 #include "Surface_03_Colors.h"
 #include "Surface_04_Rotate.h"
+#include "Surface_05_Cube3D.h"
+#include "Surface_06_TextureMap.h"
 
 Button showFreetypeButton(10, 10, 150, 40);
 Button showTrangleButton(10, 60, 150, 40);
 Button showColorButton(10, 110, 150, 40);
 Button showRotateButton(10, 160, 150, 40);
+Button showCube3DButton(10, 210, 150, 40);
+Button showTextureMapButton(10, 260, 150, 40);
     // surfaces
 Surface * currentSurface;
 BaseWindowSurface baseWindowSurface;
 QuadsSurface quadsSurface;
 ColorsSurface colorsSurface;
 RotateSurface rotateSurface;
+Cube3DSurface cube3DSurface;
+TextureMapSurface textureMapSurface;
 
 void choose01(){
         //    FileLog::getInstance()->init();
@@ -47,6 +53,16 @@ void choose04(){
     currentSurface->onStart();
 }
 
+void choose05(){
+    currentSurface = &cube3DSurface;
+    currentSurface->onStart();
+}
+
+void choose06(){
+    currentSurface = &textureMapSurface;
+    currentSurface->onStart();
+}
+
 Scene::Scene(){
     
 }
@@ -58,24 +74,41 @@ void Scene::init(){
                                   new GLubyte[3]{0xac, 0xe1, 0xaf}
                                   );
     showFreetypeButton.setOnClickListener(choose01);
+        //
     showTrangleButton.setText("show triangle");
     showTrangleButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
                                  new GLubyte[3]{0, 0x75, 0x5e},
                                  new GLubyte[3]{0xac, 0xe1, 0xaf}
                                  );
     showTrangleButton.setOnClickListener(choose02);
+        //
     showColorButton.setText("show colors");
     showColorButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
                                new GLubyte[3]{0, 0x75, 0x5e},
                                new GLubyte[3]{0xac, 0xe1, 0xaf}
                                );
     showColorButton.setOnClickListener(choose03);
+        //
     showRotateButton.setText("show rotate");
     showRotateButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
                                 new GLubyte[3]{0, 0x75, 0x5e},
                                 new GLubyte[3]{0xac, 0xe1, 0xaf}
                                 );
     showRotateButton.setOnClickListener(choose04);
+        //
+    showCube3DButton.setText("show Cube 3D");
+    showCube3DButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
+                                new GLubyte[3]{0, 0x75, 0x5e},
+                                new GLubyte[3]{0xac, 0xe1, 0xaf}
+                                );
+    showCube3DButton.setOnClickListener(choose05);
+        //
+    showTextureMapButton.setText("show Texture");
+    showTextureMapButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
+                                new GLubyte[3]{0, 0x75, 0x5e},
+                                new GLubyte[3]{0xac, 0xe1, 0xaf}
+                                );
+    showTextureMapButton.setOnClickListener(choose06);
 }
 
 void Scene::finish(){
@@ -91,13 +124,15 @@ void Scene::onDestrory(){
 }
 
 void Scene::display(){
+    if(NULL!=currentSurface){
+        currentSurface->display();
+    }// end if
     showFreetypeButton.display();
     showTrangleButton.display();
     showColorButton.display();
     showRotateButton.display();
-    if(NULL!=currentSurface){
-        currentSurface->display();
-    }// end if
+    showCube3DButton.display();
+    showTextureMapButton.display();
 }
 
 void Scene::onMouseEvent(int button, int state, int x, int y){
@@ -105,6 +140,8 @@ void Scene::onMouseEvent(int button, int state, int x, int y){
     showTrangleButton.onMouseEvent(button, state, x, y);
     showColorButton.onMouseEvent(button, state, x, y);
     showRotateButton.onMouseEvent(button, state, x, y);
+    showCube3DButton.onMouseEvent(button, state, x, y);
+    showTextureMapButton.onMouseEvent(button, state, x, y);
 }
 
 void Scene::onMotion(int x, int y){
@@ -112,6 +149,8 @@ void Scene::onMotion(int x, int y){
     showTrangleButton.onMotion(x, y);
     showColorButton.onMotion(x, y);
     showRotateButton.onMotion(x, y);
+    showCube3DButton.onMotion(x, y);
+    showTextureMapButton.onMotion(x, y);
 }
 
 void Scene::onPassiveMotion(int x, int y){
@@ -119,6 +158,8 @@ void Scene::onPassiveMotion(int x, int y){
     showTrangleButton.onPassiveMotion(x, y);
     showColorButton.onPassiveMotion(x, y);
     showRotateButton.onPassiveMotion(x, y);
+    showCube3DButton.onPassiveMotion(x, y);
+    showTextureMapButton.onPassiveMotion(x, y);
 }
 
 void Scene::onEntry(int state){

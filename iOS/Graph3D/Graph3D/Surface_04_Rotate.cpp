@@ -9,9 +9,6 @@
 #include "Surface_04_Rotate.h"
 #include "Screen.h"
 
-GLfloat rotTri;
-GLfloat rotQuad;
-
 void RotateSurface::onStart(){
     glMatrixMode(GL_PROJECTION);// 选择投影矩阵
 	glLoadIdentity(); // 重置投影矩阵
