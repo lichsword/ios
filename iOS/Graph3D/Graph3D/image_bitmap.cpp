@@ -11,18 +11,15 @@
 
 int Image::loadImage(char *path){
     FILE * lpFile;
+    unsigned short fileType;
     BitmapFileHeader bitmapFileHeader;
     BitmapInfoHeader bitmapInfoHeader;
     int channels = 1;
-    int width = 0;
-    int height = 0;
+    long dataSize = 0;
     int step = 0;
     int offset = 0;
     unsigned char pixelValue;
     RGBQuad * quad;
-    int i;
-    int j;
-    int k;
     
         // start load work.
     lpFile = fopen(path, "rb");
@@ -31,6 +28,60 @@ int Image::loadImage(char *path){
         return NULL;
     }// end if
     
-        // TODO
+    fread(&fileType, sizeof(unsigned short), 1, lpFile);
+    if(fileType != 0x4d42){
+            // not bitmap.
+        return NULL;
+    }// end if
+    
+    fseek(lpFile, 0, SEEK_SET);
+    memset(&bitmapFileHeader, 0, sizeof(BitmapFileHeader));
+    fread(&bitmapFileHeader, sizeof(BitmapFileHeader), 1, lpFile);
+    fseek(lpFile, 14, SEEK_SET);
+    memset(&bitmapInfoHeader, 0, sizeof(BitmapInfoHeader));
+    fread(&bitmapInfoHeader, sizeof(BitmapInfoHeader), 1, lpFile);
+    
+    if(bitmapInfoHeader.bitCount == 8){
+            // 8 位，有调色板
+    }else if(bitmapInfoHeader.bitCount == 24){
+            // 24 位，RGB 3色
+        width = bitmapInfoHeader.width;
+        height = bitmapInfoHeader.height;
+        
+        if(NULL!= data){
+            delete data;
+        }// end if
+        
+            // read image data.
+        dataSize = width * height * 3;// 24位 is 3 bytes
+        data = (unsigned char *)alloca(dataSize);
+        memset(data, 0, dataSize);
+        
+        int lineBytes = width * 3;
+        int colBytes = 3;
+        
+        int fileOffset = bitmapFileHeader.offset;
+        int memOffset = 0;
+        for(int line=0; line<height; line++) {
+            for(int col=0; col<width; col++) {
+                    //----------
+                fseek(lpFile, (fileOffset + 2), SEEK_SET);          fread((data + memOffset + 2), 1, 1, lpFile);
+                fseek(lpFile, (fileOffset +1), SEEK_SET);           fread((data + memOffset + 1), 1, 1, lpFile);
+                fseek(lpFile, fileOffset, SEEK_SET);                fread((data + memOffset), 1, 1, lpFile);
+//--------
+//                *(data + memOffset) = 0xff;
+//                *(data + memOffset + 1) = 0x00;
+//                *(data + memOffset + 2) = 0x00;
+                
+                fileOffset +=colBytes;
+                memOffset+= colBytes;
+            }
+        }
+    }
+    
+    if(NULL!=lpFile){
+        fclose(lpFile);
+    }// end if
+    
     return 1;
 }

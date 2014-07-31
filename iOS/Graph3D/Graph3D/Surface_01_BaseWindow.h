@@ -13,7 +13,10 @@
 #include "Surface.h"
 
 class BaseWindowSurface : public Surface{
+private:
+    char buffer[256];
 public:
+    virtual void onStart();
     virtual void display();
 };
 

@@ -12,27 +12,36 @@
 #include <iostream>
 
     // bitmap 文件头
+    // 替换默认的对齐4字节为对齐1字节
+#pragma pack(push)  /* push current alignment to stack */
+#pragma pack(1)     /* set alignment to 1 byte boundary */
 typedef struct{
-    unsigned long size;
-    unsigned short reserved1;
-    unsigned short reserved2;
-    unsigned long offset;
+    unsigned short type;// 2 bytes
+    unsigned int size;// 4 bytes
+    unsigned short reserved1;// 2 bytes
+    unsigned short reserved2;// 2 bytes
+    unsigned int offset;// 4 bytes
 }BitmapFileHeader;
+#pragma pack(pop)   /* restore original alignment from stack */
 
     // bitmap 信息头
+    // 替换默认的对齐4字节为对齐1字节
+#pragma pack(push)  /* push current alignment to stack */
+#pragma pack(1)     /* set alignment to 1 byte boundary */
 typedef struct{
-    unsigned long size;
-    long width;
-    long height;
+    unsigned int size;
+    unsigned int width;
+    unsigned int height;
     unsigned short planes;
     unsigned short bitCount;
-    unsigned long compression;
-    unsigned long sizeImage;
-    long XPelsPerMeter;
-    long YPelsPerMeter;
-    unsigned long ctrlUsed;
-    unsigned long ctrlImportant;
+    unsigned int compression;
+    unsigned int sizeImage;
+    unsigned int XPelsPerMeter;
+    unsigned int YPelsPerMeter;
+    unsigned int ctrlUsed;
+    unsigned int ctrlImportant;
 }BitmapInfoHeader;
+#pragma pack(pop)   /* restore original alignment from stack */
 
     // rgb 四元数
 typedef struct{
@@ -41,19 +50,24 @@ typedef struct{
     unsigned char rgbRed;
 }RGBQuad;
 
-//typedef struct{
-//    int width;
-//    int height;
-//    int channels;
-//    unsigned char * imageData;
-//}Image;
-
 class Image{
 private:
     int width;
     int height;
     int channels;
-    unsigned char * imageData;
+    unsigned char * data;
+public:
+    Image(){
+        width = 0;
+        height = 0;
+        channels = 0;
+        data = NULL;
+    }
+    int getWidth(){return width;}
+    int getHeight(){return height;}
+    unsigned char * getImageDataRef(){
+        return data;
+    }
 public:
     int loadImage(char * path);
 };

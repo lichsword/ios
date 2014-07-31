@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "TextureMapSurface::onStart():Surface_06_TextureMap.cpp">
+      </ContextState>
+      <ContextState
+         contextName = "Image::loadImage(char*):image_bitmap.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "curOffset">
+            </PersistentString>
+            <PersistentString
+               value = "data">
+            </PersistentString>
+            <PersistentString
+               value = "fileOffset">
+            </PersistentString>
+            <PersistentString
+               value = "memOffset">
+            </PersistentString>
+            <PersistentString
+               value = "lineBytes">
+            </PersistentString>
+            <PersistentString
+               value = "data + memOffset">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "fileOffset">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

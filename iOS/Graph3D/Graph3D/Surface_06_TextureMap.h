@@ -15,7 +15,10 @@
 
 class TextureMapSurface : public Surface{
 private:
-    Image image;
+    GLfloat rotCube;
+    GLfloat rotComX;
+    Image * lpImages;
+    GLuint * textureIDs;// 声明纹理对象变量
 public:
     virtual void onStart();
     virtual void display();
