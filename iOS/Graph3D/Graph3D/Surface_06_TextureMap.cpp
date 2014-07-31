@@ -127,6 +127,6 @@ void TextureMapSurface::display(){
     glEnd();
     glPopMatrix();
     
-//    rotCube -= 1.0f;
-//    rotComX += 1.0f;
+    rotCube -= 1.0f;
+    rotComX += 1.0f;
 }
