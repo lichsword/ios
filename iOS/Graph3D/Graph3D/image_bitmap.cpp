@@ -81,6 +81,7 @@ int Image::loadImage(char *path){
     
     if(NULL!=lpFile){
         fclose(lpFile);
+        lpFile = NULL;
     }// end if
     
     return 1;

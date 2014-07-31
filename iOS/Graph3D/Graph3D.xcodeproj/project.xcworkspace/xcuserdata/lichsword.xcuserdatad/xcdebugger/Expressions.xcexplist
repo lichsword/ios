@@ -4,6 +4,14 @@
    <ContextStates>
       <ContextState
          contextName = "TextureMapSurface::onStart():Surface_06_TextureMap.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "textureIDs[1]">
+            </PersistentString>
+            <PersistentString
+               value = "textureIDs[0]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "Image::loadImage(char*):image_bitmap.cpp">

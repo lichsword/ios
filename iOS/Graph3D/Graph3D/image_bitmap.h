@@ -63,10 +63,10 @@ public:
         channels = 0;
         data = NULL;
     }
-    int getWidth(){return width;}
-    int getHeight(){return height;}
+    int getWidth(){return this->width;}
+    int getHeight(){return this->height;}
     unsigned char * getImageDataRef(){
-        return data;
+        return this->data;
     }
 public:
     int loadImage(char * path);

@@ -18,7 +18,9 @@ private:
     GLfloat rotCube;
     GLfloat rotComX;
     Image * lpImages;
-    GLuint * textureIDs;// 声明纹理对象变量
+    GLuint * lpTextureID;// 声明纹理对象变量
+private:
+    void loadTexture2D(GLuint id, Image image);
 public:
     virtual void onStart();
     virtual void display();
