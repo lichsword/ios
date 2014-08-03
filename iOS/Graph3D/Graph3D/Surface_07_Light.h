@@ -35,7 +35,7 @@ public:
         toggleLight=1;
         xRot = 0.0f;
         yRot = 0.0f;
-        z = -6.0f;
+        z = -10.0f;
         bmp_file_1 = "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/NeHe_rebuild.bmp";
         bmp_file_2 = "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/test_color_green_win.bmp";
         bmp_file_3 = "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/Crate.bmp";

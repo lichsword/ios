@@ -1,10 +1,13 @@
-//
-//  Surface_07_Light.cpp
-//  Graph3D
-//
-//  Created by 王 岳 on 14-8-3.
-//  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
-//
+    //
+    //  Surface_07_Light.cpp
+    //  Graph3D
+    //
+    //  Created by 王 岳 on 14-8-3.
+    //  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
+    // (1)注意要设置法线，用于光源反射
+    // (2)设置1号光源，开启光源
+    // (3)每帧要清理颜色缓冲区和深度缓冲区
+    //
 
 #include "Surface_07_Light.h"
 #include "Screen.h"
@@ -22,20 +25,22 @@ void LightSurface::loadTexture2D(GLuint id, Image image){
 
 void LightSurface::onStart(){
     lpImages = new Image[3];
+        // 加载位图
     lpImages[0].loadImage(this->bmp_file_3);
     
     lpTextureID = new GLuint[3];
-    glEnable(GL_TEXTURE_2D);// 开启2D纹理
-    
-    glGenTextures(2, lpTextureID);// 生成纹理对象索引,赋值给变量
-
+        // 开启2D纹理
+    glEnable(GL_TEXTURE_2D);
+        // 生成纹理对象索引,赋值给变量
+    glGenTextures(2, lpTextureID);
+        // 加载纹理
     loadTexture2D(lpTextureID[0], lpImages[0]);
-    
-    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);				// 设置环境光
-    
-    glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);			// 设置光源位置
-    
-    glEnable(GL_LIGHT1);							// 启用一号光源
+        // 设置环境光
+    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);
+        // 设置光源位置
+    glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);
+        // 启用一号光源
+    glEnable(GL_LIGHT1);
     
     /**
      * func: 设置纹理的环境参数
@@ -54,24 +59,27 @@ void LightSurface::onStart(){
 
 void LightSurface::display(){
     
-        // 清除背景色
-    glColor3b(255, 255, 0);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glEnable(GL_SMOOTH);
-    
-    glBindTexture(GL_TEXTURE_2D, lpTextureID[0]);// 上下文绑定纹理
-    
+        // 设置深度缓冲值为1.0f
     glClearDepth(1.0f);
+        // 清除颜色缓冲区 和 深度缓冲区
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        // 上下文绑定纹理
+    glBindTexture(GL_TEXTURE_2D, lpTextureID[0]);
+    
+        // 开启深度测试
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
     
+        // 保护原栈
     glPushMatrix();
     
     glLoadIdentity();
+        // 偏移和旋转
     glTranslatef(2.0f, 0.0f, z);
     glRotatef(yRot, 0.0f, 1.0f, 0.0f);
     glRotatef(xRot, 1.0f, 0.0f, 0.0f);
     
+        // 开始编制
     glBegin(GL_QUADS);
     
         // 前面
@@ -118,8 +126,9 @@ void LightSurface::display(){
     
     glEnd();
     glPopMatrix();
-
+    
+        // 下一帧位移与旋转参数增加
     xRot += 1.0f;
     yRot -= 2.0f;
-    z = -10.0f;
+    z += 0.01f;
 }
