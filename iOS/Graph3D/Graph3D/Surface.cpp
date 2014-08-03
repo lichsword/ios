@@ -14,7 +14,7 @@ GLfloat	cnt1;			// 字体移动计数器1
 GLfloat	cnt2;			// 字体移动计数器2
 
 void Surface::onStart(){
-    
+        // do nothing.
 }
 
 void Surface::display(){
@@ -32,4 +32,8 @@ void Surface::display(){
     
     cnt1+=2.0f;
     cnt2+=0.005f;
+}
+
+void Surface::keyboard(unsigned char key, int x, int y){
+        // do nothing.
 }

@@ -24,6 +24,7 @@ public:
     void onMotion(int x, int y);
     void onPassiveMotion(int x, int y);
     void onEntry(int state);
+    void keyboard(unsigned char key, int x, int y);
 };
 
 #endif /* defined(__Graph3D__Scene__) */

@@ -184,3 +184,9 @@ void Scene::onPassiveMotion(int x, int y){
 void Scene::onEntry(int state){
     
 }
+
+void Scene::keyboard(unsigned char key, int x, int y){
+    if(NULL!=currentSurface){
+        currentSurface->keyboard(key, x, y);
+    }// end if
+}

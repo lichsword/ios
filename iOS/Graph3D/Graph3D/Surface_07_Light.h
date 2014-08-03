@@ -1,10 +1,10 @@
-//
-//  Surface_07_Light.h
-//  Graph3D
-//
-//  Created by 王 岳 on 14-8-3.
-//  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
-//
+    //
+    //  Surface_07_Light.h
+    //  Graph3D
+    //
+    //  Created by 王 岳 on 14-8-3.
+    //  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
+    //
 
 #ifndef __Graph3D__Surface_07_Light__
 #define __Graph3D__Surface_07_Light__
@@ -15,9 +15,11 @@
 
 class LightSurface : public Surface{
 private:
-    int toggleLight;
+    int light;
     GLfloat xRot;
     GLfloat yRot;
+    GLfloat x;
+    GLfloat y;
     GLfloat z;
     GLfloat LightAmbient[4]= { 0.5f, 0.5f, 0.5f, 1.0f }; 				// 环境光参数
     GLfloat LightDiffuse[4]= { 1.0f, 1.0f, 1.0f, 1.0f };				 // 漫射光参数
@@ -28,13 +30,16 @@ private:
     char * bmp_file_1;
     char * bmp_file_2;
     char * bmp_file_3;
+    char buffer[256];// 字符缓冲区
 private:
     void loadTexture2D(GLuint id, Image image);
 public:
     LightSurface(){
-        toggleLight=1;
+        light=1;
         xRot = 0.0f;
         yRot = 0.0f;
+        x = 0;
+        y = 0;
         z = -10.0f;
         bmp_file_1 = "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/NeHe_rebuild.bmp";
         bmp_file_2 = "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/test_color_green_win.bmp";
@@ -42,6 +47,7 @@ public:
     }
     virtual void onStart();
     virtual void display();
+    virtual void keyboard(unsigned char key, int x, int y);
 };
 
 

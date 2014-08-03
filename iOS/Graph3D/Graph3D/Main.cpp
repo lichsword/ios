@@ -83,6 +83,7 @@ void keyboard(unsigned char key, int x, int y){
             exit(0);
             break;
         default:
+            our_scene.keyboard(key, x, y);
             break;
     }
 }

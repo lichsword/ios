@@ -32,6 +32,9 @@ public:
     void e(char * log);
     void release();
 private:
+    FileLog(){
+        init();
+    }
     static FileLog * sInstance;
     static char PATH[];
     FILE * lpFile;

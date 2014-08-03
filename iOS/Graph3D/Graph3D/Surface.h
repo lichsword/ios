@@ -23,6 +23,7 @@ class Surface{
 public:
     virtual void onStart();
     virtual void display();
+    virtual void keyboard(unsigned char key, int x, int y);
 };
 
 #endif /* defined(__Graph3D__SurfaceView__) */
