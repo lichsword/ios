@@ -16,6 +16,7 @@
 class LightSurface : public Surface{
 private:
     int light;
+    int rotateLeft;// 向左旋转
     GLfloat xRot;
     GLfloat yRot;
     GLfloat x;
@@ -35,7 +36,8 @@ private:
     void loadTexture2D(GLuint id, Image image);
 public:
     LightSurface(){
-        light=1;
+        light = 1;
+        rotateLeft = 1;
         xRot = 0.0f;
         yRot = 0.0f;
         x = 0;

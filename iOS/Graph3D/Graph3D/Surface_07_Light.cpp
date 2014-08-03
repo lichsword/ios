@@ -7,6 +7,15 @@
     // (1)注意要设置法线，用于光源反射
     // (2)设置1号光源，开启光源
     // (3)每帧要清理颜色缓冲区和深度缓冲区
+    // (4)操作:
+    //    z 拉近;
+    //    Z:拉远;
+    //    a/A:左移;
+    //    d/D:右移;
+    //    w/W:上移;
+    //    s/S:下移
+    //    l/L:开关灯光
+    //    r/R:旋转方向反转
     //
 
 #include "Surface_07_Light.h"
@@ -50,6 +59,14 @@ void LightSurface::keyboard(unsigned char key, int x, int y){
         case 'S':
             this->y -= 0.5f;
             break;
+        case 'r':
+        case 'R':
+            if(rotateLeft){
+                rotateLeft =0;
+            }else{
+                rotateLeft = 1;
+            }
+            break;
         default:
             break;
     }
@@ -79,17 +96,17 @@ void LightSurface::onStart(){
         // 加载纹理
     loadTexture2D(lpTextureID[0], lpImages[0]);
         // 设置环境光
-    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);
+    glLightfv(GL_LIGHT0, GL_AMBIENT, LightAmbient);
         // 设置光源位置
-    glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);
-        // 启用一号光源
-    glEnable(GL_LIGHT1);
+    glLightfv(GL_LIGHT0, GL_POSITION,LightPosition);
+        // 启用0号光源
+    glEnable(GL_LIGHT0);
     
     /**
      * func: 设置纹理的环境参数
-     * use GL_MODULATE instead of GL_REPLACE if lighting is being used
+     * use GL_MODULATE instead of GL_REPLACE if lighting is being used GL_REPLACE
      */
-    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
     
     glMatrixMode(GL_PROJECTION);// 选择投影矩阵
 	glLoadIdentity(); // 重置投影矩阵
@@ -103,9 +120,15 @@ void LightSurface::onStart(){
 void LightSurface::display(){
     
     if(light){
+            // 开启光源
         glEnable(GL_LIGHTING);
+            // 开启0号光源
+            //        glEnable(GL_LIGHT0);
     }else{
+            // 关闭光源
         glDisable(GL_LIGHTING);
+            // 关闭0号光源
+            //        glDisable(GL_LIGHT0);
     }// endif
     
         // 设置深度缓冲值为1.0f
@@ -185,7 +208,12 @@ void LightSurface::display(){
     glPopMatrix();
     
         // 下一帧位移与旋转参数增加
-    xRot += 1.0f;
-    yRot -= 2.0f;
+    if(rotateLeft){
+        xRot += 1.0f;
+        yRot -= 2.0f;
+    }else{
+        xRot -= 1.0f;
+        yRot += 2.0f;
+    }
     
 }
