@@ -15,6 +15,7 @@
 #include "Surface_04_Rotate.h"
 #include "Surface_05_Cube3D.h"
 #include "Surface_06_TextureMap.h"
+#include "Surface_07_Light.h"
 
 Button showFreetypeButton(10, 10, 150, 40);
 Button showTrangleButton(10, 60, 150, 40);
@@ -22,6 +23,7 @@ Button showColorButton(10, 110, 150, 40);
 Button showRotateButton(10, 160, 150, 40);
 Button showCube3DButton(10, 210, 150, 40);
 Button showTextureMapButton(10, 260, 150, 40);
+Button showLightButton(10, 310, 150, 40);
     // surfaces
 Surface * currentSurface;
 BaseWindowSurface baseWindowSurface;
@@ -30,6 +32,7 @@ ColorsSurface colorsSurface;
 RotateSurface rotateSurface;
 Cube3DSurface cube3DSurface;
 TextureMapSurface textureMapSurface;
+LightSurface lightSurface;
 
 void choose01(){
         //    FileLog::getInstance()->init();
@@ -60,6 +63,11 @@ void choose05(){
 
 void choose06(){
     currentSurface = &textureMapSurface;
+    currentSurface->onStart();
+}
+
+void choose07(){
+    currentSurface = &lightSurface;
     currentSurface->onStart();
 }
 
@@ -109,6 +117,13 @@ void Scene::init(){
                                 new GLubyte[3]{0xac, 0xe1, 0xaf}
                                 );
     showTextureMapButton.setOnClickListener(choose06);
+        //
+    showLightButton.setText("show Light");
+    showLightButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
+                                    new GLubyte[3]{0, 0x75, 0x5e},
+                                    new GLubyte[3]{0xac, 0xe1, 0xaf}
+                                    );
+    showLightButton.setOnClickListener(choose07);
 }
 
 void Scene::finish(){
@@ -133,6 +148,7 @@ void Scene::display(){
     showRotateButton.display();
     showCube3DButton.display();
     showTextureMapButton.display();
+    showLightButton.display();
 }
 
 void Scene::onMouseEvent(int button, int state, int x, int y){
@@ -142,6 +158,7 @@ void Scene::onMouseEvent(int button, int state, int x, int y){
     showRotateButton.onMouseEvent(button, state, x, y);
     showCube3DButton.onMouseEvent(button, state, x, y);
     showTextureMapButton.onMouseEvent(button, state, x, y);
+    showLightButton.onMouseEvent(button, state, x, y);
 }
 
 void Scene::onMotion(int x, int y){
@@ -151,6 +168,7 @@ void Scene::onMotion(int x, int y){
     showRotateButton.onMotion(x, y);
     showCube3DButton.onMotion(x, y);
     showTextureMapButton.onMotion(x, y);
+    showLightButton.onMotion(x, y);
 }
 
 void Scene::onPassiveMotion(int x, int y){
@@ -160,6 +178,7 @@ void Scene::onPassiveMotion(int x, int y){
     showRotateButton.onPassiveMotion(x, y);
     showCube3DButton.onPassiveMotion(x, y);
     showTextureMapButton.onPassiveMotion(x, y);
+    showLightButton.onPassiveMotion(x, y);
 }
 
 void Scene::onEntry(int state){

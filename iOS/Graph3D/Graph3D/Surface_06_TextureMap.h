@@ -19,9 +19,15 @@ private:
     GLfloat rotComX;
     Image * lpImages;
     GLuint * lpTextureID;// 声明纹理对象变量
+    char * bmp_file_1;
+    char * bmp_file_2;
 private:
     void loadTexture2D(GLuint id, Image image);
 public:
+    TextureMapSurface(){
+        bmp_file_1 ="/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/NeHe_rebuild.bmp";
+        bmp_file_2 ="/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/test_color_green_win.bmp";
+    }
     virtual void onStart();
     virtual void display();
 };

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84053FEF198DDF3E00D32C4C /* Surface_07_Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84053FED198DDF3E00D32C4C /* Surface_07_Light.cpp */; };
 		840A911619727B6E00551A3C /* libFreetype2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A911519727B6E00551A3C /* libFreetype2.a */; };
 		841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841B859F197B7B5A009BECD0 /* Test.cpp */; };
 		844F0AE019751153003A78DE /* FreeType2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0ADE19751153003A78DE /* FreeType2.cpp */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84053FED198DDF3E00D32C4C /* Surface_07_Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_07_Light.cpp; sourceTree = "<group>"; };
+		84053FEE198DDF3E00D32C4C /* Surface_07_Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_07_Light.h; sourceTree = "<group>"; };
 		840A911519727B6E00551A3C /* libFreetype2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreetype2.a; path = ../Libs/libFreetype2.a; sourceTree = "<group>"; };
 		841B859F197B7B5A009BECD0 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		841B85A0197B7B5A009BECD0 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
@@ -280,6 +283,8 @@
 				84C741151981518500E055C5 /* Surface_05_Cube3D.h */,
 				8498AE2E1984F76700E81EBD /* Surface_06_TextureMap.cpp */,
 				8498AE2F1984F76700E81EBD /* Surface_06_TextureMap.h */,
+				84053FED198DDF3E00D32C4C /* Surface_07_Light.cpp */,
+				84053FEE198DDF3E00D32C4C /* Surface_07_Light.h */,
 			);
 			name = surface;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				844F0AF31977EB34003A78DE /* View.cpp in Sources */,
 				844F0AEF1976A906003A78DE /* Surface.cpp in Sources */,
 				84C741161981518500E055C5 /* Surface_05_Cube3D.cpp in Sources */,
+				84053FEF198DDF3E00D32C4C /* Surface_07_Light.cpp in Sources */,
 				844F0AE919754EDE003A78DE /* FileLog.cpp in Sources */,
 				844F0AE619752D06003A78DE /* Screen.cpp in Sources */,
 			);

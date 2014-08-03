@@ -4,24 +4,6 @@
 //
 //  Created by 王 岳 on 14-7-27.
 //  Copyright (c) 2014年 ___LICHSOWRD___. All rights reserved.
-//
-
-#include "Surface_06_TextureMap.h"
-#include "Screen.h"
-
-char bmp_file_1[] ="/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/NeHe_rebuild.bmp";
-char bmp_file_2[] ="/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/test_color_green_win.bmp";
-
-void TextureMapSurface::loadTexture2D(GLuint id, Image image){
-        // 上下文绑定纹理(一般在glTexImage2D之后调用)
-    glBindTexture(GL_TEXTURE_2D, id);
-        // 加载纹理数据
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.getWidth(), image.getHeight(), 0, GL_BGR, GL_UNSIGNED_BYTE, image.getImageDataRef());
-    
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); // 线形滤波
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 线形滤波
-}
-
 /**
  * 未解决bug：
  * (1)glTexEnvf()方法的调用次序
@@ -29,6 +11,21 @@ void TextureMapSurface::loadTexture2D(GLuint id, Image image){
  * (3)依次加载2个位图，则第一个位图无法显示，推理依次加载N个位图也会有问题
  * (4)位图上方几行的相素有杂色
  */
+//
+
+#include "Surface_06_TextureMap.h"
+#include "Screen.h"
+
+void TextureMapSurface::loadTexture2D(GLuint id, Image image){
+        // 上下文绑定纹理(一般在glTexImage2D之后调用)
+    glBindTexture(GL_TEXTURE_2D, id);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); // 线形滤波
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 线形滤波
+        // 加载纹理数据
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.getWidth(), image.getHeight(), 0, GL_BGR, GL_UNSIGNED_BYTE, image.getImageDataRef());
+}
+
+
 void TextureMapSurface::onStart(){
     
     lpImages = new Image[2];
