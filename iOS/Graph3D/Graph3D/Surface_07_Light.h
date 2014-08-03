@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "Surface.h"
+#include "image_bitmap.h"
 
 class LightSurface : public Surface{
 private:
@@ -22,10 +23,13 @@ private:
     GLfloat LightDiffuse[4]= { 1.0f, 1.0f, 1.0f, 1.0f };				 // 漫射光参数
     GLfloat LightPosition[4]= { 0.0f, 0.0f, 2.0f, 1.0f };				 // 光源位置
     GLuint	filter;									// 滤波类型
-    GLuint	texture[3];								// 3种纹理的储存空间
+    Image * lpImages;
+    GLuint * lpTextureID;// 声明3种纹理的储存空间
     char * bmp_file_1;
     char * bmp_file_2;
     char * bmp_file_3;
+private:
+    void loadTexture2D(GLuint id, Image image);
 public:
     LightSurface(){
         toggleLight=1;
