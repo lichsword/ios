@@ -16,6 +16,7 @@
 #include "Surface_05_Cube3D.h"
 #include "Surface_06_TextureMap.h"
 #include "Surface_07_Light.h"
+#include "Surface_28_Bezier.h"
 
 Button showFreetypeButton(10, 10, 150, 40);
 Button showTrangleButton(10, 60, 150, 40);
@@ -24,6 +25,7 @@ Button showRotateButton(10, 160, 150, 40);
 Button showCube3DButton(10, 210, 150, 40);
 Button showTextureMapButton(10, 260, 150, 40);
 Button showLightButton(10, 310, 150, 40);
+Button showBezierButton(10, 360, 150, 40);
     // surfaces
 Surface * currentSurface;
 BaseWindowSurface baseWindowSurface;
@@ -33,6 +35,7 @@ RotateSurface rotateSurface;
 Cube3DSurface cube3DSurface;
 TextureMapSurface textureMapSurface;
 LightSurface lightSurface;
+BezierSurface bezierSurface;
 
 void choose01(){
         //    FileLog::getInstance()->init();
@@ -68,6 +71,11 @@ void choose06(){
 
 void choose07(){
     currentSurface = &lightSurface;
+    currentSurface->onStart();
+}
+
+void choose28(){
+    currentSurface = &bezierSurface;
     currentSurface->onStart();
 }
 
@@ -113,17 +121,24 @@ void Scene::init(){
         //
     showTextureMapButton.setText("show Texture");
     showTextureMapButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
-                                new GLubyte[3]{0, 0x75, 0x5e},
-                                new GLubyte[3]{0xac, 0xe1, 0xaf}
-                                );
+                                    new GLubyte[3]{0, 0x75, 0x5e},
+                                    new GLubyte[3]{0xac, 0xe1, 0xaf}
+                                    );
     showTextureMapButton.setOnClickListener(choose06);
         //
     showLightButton.setText("show Light");
     showLightButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
-                                    new GLubyte[3]{0, 0x75, 0x5e},
-                                    new GLubyte[3]{0xac, 0xe1, 0xaf}
-                                    );
+                               new GLubyte[3]{0, 0x75, 0x5e},
+                               new GLubyte[3]{0xac, 0xe1, 0xaf}
+                               );
     showLightButton.setOnClickListener(choose07);
+        //
+    showBezierButton.setText("show Bezier");
+    showBezierButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
+                                new GLubyte[3]{0, 0x75, 0x5e},
+                                new GLubyte[3]{0xac, 0xe1, 0xaf}
+                                );
+    showBezierButton.setOnClickListener(choose28);
 }
 
 void Scene::finish(){
@@ -149,6 +164,7 @@ void Scene::display(){
     showCube3DButton.display();
     showTextureMapButton.display();
     showLightButton.display();
+    showBezierButton.display();
 }
 
 void Scene::onMouseEvent(int button, int state, int x, int y){
@@ -159,6 +175,7 @@ void Scene::onMouseEvent(int button, int state, int x, int y){
     showCube3DButton.onMouseEvent(button, state, x, y);
     showTextureMapButton.onMouseEvent(button, state, x, y);
     showLightButton.onMouseEvent(button, state, x, y);
+    showBezierButton.onMouseEvent(button, state, x, y);
 }
 
 void Scene::onMotion(int x, int y){
@@ -169,6 +186,7 @@ void Scene::onMotion(int x, int y){
     showCube3DButton.onMotion(x, y);
     showTextureMapButton.onMotion(x, y);
     showLightButton.onMotion(x, y);
+    showBezierButton.onMotion(x, y);
 }
 
 void Scene::onPassiveMotion(int x, int y){
@@ -179,6 +197,7 @@ void Scene::onPassiveMotion(int x, int y){
     showCube3DButton.onPassiveMotion(x, y);
     showTextureMapButton.onPassiveMotion(x, y);
     showLightButton.onPassiveMotion(x, y);
+    showBezierButton.onPassiveMotion(x, y);
 }
 
 void Scene::onEntry(int state){

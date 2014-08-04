@@ -10,6 +10,8 @@
 		84053FEF198DDF3E00D32C4C /* Surface_07_Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84053FED198DDF3E00D32C4C /* Surface_07_Light.cpp */; };
 		840A911619727B6E00551A3C /* libFreetype2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A911519727B6E00551A3C /* libFreetype2.a */; };
 		841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841B859F197B7B5A009BECD0 /* Test.cpp */; };
+		8438DE02198E77E500C3B8A2 /* Surface_28_Bezier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8438DE00198E77E500C3B8A2 /* Surface_28_Bezier.cpp */; };
+		8438DE05198E7B2700C3B8A2 /* bezier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8438DE03198E7B2700C3B8A2 /* bezier.cpp */; };
 		844F0AE019751153003A78DE /* FreeType2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0ADE19751153003A78DE /* FreeType2.cpp */; };
 		844F0AE319752A17003A78DE /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AE119752A17003A78DE /* Button.cpp */; };
 		844F0AE619752D06003A78DE /* Screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0AE419752D06003A78DE /* Screen.cpp */; };
@@ -56,6 +58,10 @@
 		840A911519727B6E00551A3C /* libFreetype2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreetype2.a; path = ../Libs/libFreetype2.a; sourceTree = "<group>"; };
 		841B859F197B7B5A009BECD0 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		841B85A0197B7B5A009BECD0 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		8438DE00198E77E500C3B8A2 /* Surface_28_Bezier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_28_Bezier.cpp; sourceTree = "<group>"; };
+		8438DE01198E77E500C3B8A2 /* Surface_28_Bezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_28_Bezier.h; sourceTree = "<group>"; };
+		8438DE03198E7B2700C3B8A2 /* bezier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = bezier.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		8438DE04198E7B2700C3B8A2 /* bezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bezier.h; sourceTree = "<group>"; };
 		844F0ADE19751153003A78DE /* FreeType2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FreeType2.cpp; sourceTree = "<group>"; };
 		844F0ADF19751153003A78DE /* FreeType2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeType2.h; sourceTree = "<group>"; };
 		844F0AE119752A17003A78DE /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Button.cpp; sourceTree = "<group>"; };
@@ -285,6 +291,8 @@
 				8498AE2F1984F76700E81EBD /* Surface_06_TextureMap.h */,
 				84053FED198DDF3E00D32C4C /* Surface_07_Light.cpp */,
 				84053FEE198DDF3E00D32C4C /* Surface_07_Light.h */,
+				8438DE00198E77E500C3B8A2 /* Surface_28_Bezier.cpp */,
+				8438DE01198E77E500C3B8A2 /* Surface_28_Bezier.h */,
 			);
 			name = surface;
 			sourceTree = "<group>";
@@ -294,6 +302,8 @@
 			children = (
 				8498AE2B1984F2AF00E81EBD /* image_bitmap.cpp */,
 				8498AE2C1984F2AF00E81EBD /* image_bitmap.h */,
+				8438DE03198E7B2700C3B8A2 /* bezier.cpp */,
+				8438DE04198E7B2700C3B8A2 /* bezier.h */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -413,11 +423,13 @@
 				844F0AE019751153003A78DE /* FreeType2.cpp in Sources */,
 				8498AE301984F76700E81EBD /* Surface_06_TextureMap.cpp in Sources */,
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,
+				8438DE02198E77E500C3B8A2 /* Surface_28_Bezier.cpp in Sources */,
 				849286CC197D3709000A147E /* Surface_01_BaseWindow.cpp in Sources */,
 				849286D0197D399F000A147E /* Surface_02_Quads.cpp in Sources */,
 				844F0AE319752A17003A78DE /* Button.cpp in Sources */,
 				844F0AF31977EB34003A78DE /* View.cpp in Sources */,
 				844F0AEF1976A906003A78DE /* Surface.cpp in Sources */,
+				8438DE05198E7B2700C3B8A2 /* bezier.cpp in Sources */,
 				84C741161981518500E055C5 /* Surface_05_Cube3D.cpp in Sources */,
 				84053FEF198DDF3E00D32C4C /* Surface_07_Light.cpp in Sources */,
 				844F0AE919754EDE003A78DE /* FileLog.cpp in Sources */,
