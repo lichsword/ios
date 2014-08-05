@@ -74,11 +74,13 @@ void BezierSurface::display(){
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
 	glLoadIdentity();
-    // 移入屏幕4个单位
-	glTranslatef(0.0f,0.0f,-4.0f);
-    // 旋转一定的角度
-	glRotatef(-75.0f,1.0f,0.0f,0.0f);
-	glRotatef(rotZ,0.0f,0.0f,1.0f);
+        // 移入屏幕4个单位
+	glTranslatef(0.0f, 0.0f, -6.0f);
+        // 旋转一定的角度
+//	glRotatef(-75.0f,1.0f,0.0f,0.0f);
+    glRotatef(rotX, 1.0f, 0.0f, 0.0f);
+    glRotatef(rotY, 0.0f, 1.0f, 0.0f);
+	glRotatef(rotZ, 0.0f, 0.0f, 1.0f);
     
         // 调用显示列表，绘制贝塞尔曲面
 	glCallList(lpBezierPath->dlBPatch);
@@ -106,9 +108,26 @@ void BezierSurface::display(){
 		glEnable(GL_TEXTURE_2D);
 	}// end if
     
+    rotX += 1.0f;
+//    rotY += 1.0f;
     rotZ += 1.0f;
 }
 
 void BezierSurface::keyboard(unsigned char key, int x, int y){
-    
+    switch (key) {
+        case 'l':
+        case 'L':
+            if(showCPoints){
+                showCPoints = 0;
+            }else{
+                showCPoints = 1;
+            }
+            break;
+        case 'f':
+        case 'F':
+                // TODO
+            break;
+        default:
+            break;
+    }
 }

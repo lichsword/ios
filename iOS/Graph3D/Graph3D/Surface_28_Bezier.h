@@ -26,6 +26,8 @@ private:
     BezierPatch * lpBezierPath;
         // 细分精度，控制曲面的显示精度
     int divs;
+    GLfloat rotX;
+    GLfloat rotY;
     GLfloat rotZ;
         // 是否显示控制点
     int showCPoints;
@@ -33,8 +35,11 @@ private:
     void loadTexture2D(GLuint id, Image image);
 public:
     BezierSurface(){
-        divs = 7;
+        divs = 100;
+        rotX = 0.0f;
+        rotY = 0.0f;
         rotZ = 0.0f;
+        
         showCPoints = 1;
         bmp_file_1 = "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/NeHe_rebuild.bmp";
         bmp_file_2 = "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/test_color_green_win.bmp";
