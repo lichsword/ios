@@ -18,6 +18,7 @@
 #include "Surface_07_Light.h"
 #include "Surface_28_Bezier.h"
 #include "Surface_34_HeightMap.h"
+#include "Surface_11_Wave.h"
 
 Button showFreetypeButton(10, 10, 150, 40);
 Button showTrangleButton(10, 60, 150, 40);
@@ -28,6 +29,7 @@ Button showTextureMapButton(10, 260, 150, 40);
 Button showLightButton(10, 310, 150, 40);
 Button showBezierButton(10, 360, 150, 40);
 Button showHeightMapButton(10, 410, 150, 40);
+Button showWaveButton(10, 460, 150, 40);
     // surfaces
 Surface * currentSurface;
 BaseWindowSurface baseWindowSurface;
@@ -39,6 +41,7 @@ TextureMapSurface textureMapSurface;
 LightSurface lightSurface;
 BezierSurface bezierSurface;
 HeightMapSurface heightMapSurface;
+WaveSurface waveSurface;
 
 void choose01(){
         //    FileLog::getInstance()->init();
@@ -77,6 +80,11 @@ void choose07(){
     currentSurface->onStart();
 }
 
+void choose11(){
+    currentSurface = &waveSurface;
+    currentSurface->onStart();
+}
+
 void choose28(){
     currentSurface = &bezierSurface;
     currentSurface->onStart();
@@ -86,6 +94,8 @@ void choose34(){
     currentSurface = &heightMapSurface;
     currentSurface->onStart();
 }
+
+
 
 Scene::Scene(){
     
@@ -141,6 +151,13 @@ void Scene::init(){
                                );
     showLightButton.setOnClickListener(choose07);
         //
+    showWaveButton.setText("show Wave");
+    showWaveButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
+                              new GLubyte[3]{0, 0x75, 0x5e},
+                              new GLubyte[3]{0xac, 0xe1, 0xaf}
+                              );
+    showWaveButton.setOnClickListener(choose11);
+        //
     showBezierButton.setText("show Bezier");
     showBezierButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
                                 new GLubyte[3]{0, 0x75, 0x5e},
@@ -150,9 +167,9 @@ void Scene::init(){
         //
     showHeightMapButton.setText("show HeightMap");
     showHeightMapButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
-                                new GLubyte[3]{0, 0x75, 0x5e},
-                                new GLubyte[3]{0xac, 0xe1, 0xaf}
-                                );
+                                   new GLubyte[3]{0, 0x75, 0x5e},
+                                   new GLubyte[3]{0xac, 0xe1, 0xaf}
+                                   );
     showHeightMapButton.setOnClickListener(choose34);
 }
 
@@ -181,6 +198,7 @@ void Scene::display(){
     showLightButton.display();
     showBezierButton.display();
     showHeightMapButton.display();
+    showWaveButton.display();
 }
 
 void Scene::onMouseEvent(int button, int state, int x, int y){
@@ -193,6 +211,7 @@ void Scene::onMouseEvent(int button, int state, int x, int y){
     showLightButton.onMouseEvent(button, state, x, y);
     showBezierButton.onMouseEvent(button, state, x, y);
     showHeightMapButton.onMouseEvent(button, state, x, y);
+    showWaveButton.onMouseEvent(button, state, x, y);
 }
 
 void Scene::onMotion(int x, int y){
@@ -205,6 +224,7 @@ void Scene::onMotion(int x, int y){
     showLightButton.onMotion(x, y);
     showBezierButton.onMotion(x, y);
     showHeightMapButton.onMotion(x, y);
+    showWaveButton.onMotion(x, y);
 }
 
 void Scene::onPassiveMotion(int x, int y){
@@ -217,6 +237,7 @@ void Scene::onPassiveMotion(int x, int y){
     showLightButton.onPassiveMotion(x, y);
     showBezierButton.onPassiveMotion(x, y);
     showHeightMapButton.onPassiveMotion(x, y);
+    showWaveButton.onPassiveMotion(x, y);
 }
 
 void Scene::onEntry(int state){
