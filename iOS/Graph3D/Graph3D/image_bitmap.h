@@ -54,13 +54,13 @@ class Image{
 private:
     int width;
     int height;
-    int channels;
+    int bitCount;
     unsigned char * data;
 public:
     Image(){
         width = 0;
         height = 0;
-        channels = 0;
+        bitCount = 0;
         data = NULL;
     }
     int getWidth(){return this->width;}

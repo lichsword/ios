@@ -39,6 +39,7 @@
 		8498AE2D1984F2AF00E81EBD /* image_bitmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8498AE2B1984F2AF00E81EBD /* image_bitmap.cpp */; };
 		8498AE301984F76700E81EBD /* Surface_06_TextureMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8498AE2E1984F76700E81EBD /* Surface_06_TextureMap.cpp */; };
 		8498AE3319852CBB00E81EBD /* NeHe.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 8498AE3219852CBB00E81EBD /* NeHe.bmp */; };
+		849B18EA19912B1A00A3691D /* Surface_34_HeightMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B18E819912B1A00A3691D /* Surface_34_HeightMap.cpp */; };
 		84C741161981518500E055C5 /* Surface_05_Cube3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C741141981518500E055C5 /* Surface_05_Cube3D.cpp */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,8 @@
 		8498AE2E1984F76700E81EBD /* Surface_06_TextureMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_06_TextureMap.cpp; sourceTree = "<group>"; };
 		8498AE2F1984F76700E81EBD /* Surface_06_TextureMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_06_TextureMap.h; sourceTree = "<group>"; };
 		8498AE3219852CBB00E81EBD /* NeHe.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = NeHe.bmp; sourceTree = "<group>"; };
+		849B18E819912B1A00A3691D /* Surface_34_HeightMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_34_HeightMap.cpp; sourceTree = "<group>"; };
+		849B18E919912B1A00A3691D /* Surface_34_HeightMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_34_HeightMap.h; sourceTree = "<group>"; };
 		84C741141981518500E055C5 /* Surface_05_Cube3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_05_Cube3D.cpp; sourceTree = "<group>"; };
 		84C741151981518500E055C5 /* Surface_05_Cube3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_05_Cube3D.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +296,8 @@
 				84053FEE198DDF3E00D32C4C /* Surface_07_Light.h */,
 				8438DE00198E77E500C3B8A2 /* Surface_28_Bezier.cpp */,
 				8438DE01198E77E500C3B8A2 /* Surface_28_Bezier.h */,
+				849B18E819912B1A00A3691D /* Surface_34_HeightMap.cpp */,
+				849B18E919912B1A00A3691D /* Surface_34_HeightMap.h */,
 			);
 			name = surface;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 			files = (
 				841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */,
 				844F0AEC1976604E003A78DE /* Scene.cpp in Sources */,
+				849B18EA19912B1A00A3691D /* Surface_34_HeightMap.cpp in Sources */,
 				849286D7197D6BEE000A147E /* Surface_04_Rotate.cpp in Sources */,
 				8498AE2D1984F2AF00E81EBD /* image_bitmap.cpp in Sources */,
 				849286D3197D3A38000A147E /* Surface_03_Colors.cpp in Sources */,

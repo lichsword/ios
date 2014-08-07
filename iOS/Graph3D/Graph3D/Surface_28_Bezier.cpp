@@ -73,6 +73,7 @@ void BezierSurface::display(){
     glBindTexture(GL_TEXTURE_2D, lpBezierPath->texture);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
+    glPushMatrix();
 	glLoadIdentity();
         // 移入屏幕4个单位
 	glTranslatef(0.0f, 0.0f, -6.0f);
@@ -107,6 +108,8 @@ void BezierSurface::display(){
 		glColor3f(1.0f,1.0f,1.0f);
 		glEnable(GL_TEXTURE_2D);
 	}// end if
+    
+    glPopMatrix();
     
     rotX += 1.0f;
 //    rotY += 1.0f;

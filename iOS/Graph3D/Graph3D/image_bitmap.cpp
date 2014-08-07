@@ -41,8 +41,36 @@ int Image::loadImage(char *path){
     memset(&bitmapInfoHeader, 0, sizeof(BitmapInfoHeader));
     fread(&bitmapInfoHeader, sizeof(BitmapInfoHeader), 1, lpFile);
     
+    this->bitCount = bitmapInfoHeader.bitCount;
     if(bitmapInfoHeader.bitCount == 8){
             // 8 位，有调色板
+        width = bitmapInfoHeader.width;
+        height = bitmapInfoHeader.height;
+        
+        if(NULL!=data){
+            delete data;
+        }// end if
+        
+            // read image data.
+        dataSize = width * height * 1;// 8 位 is 1 byte
+        data = (unsigned char *) alloca(dataSize);
+        memset(data, 0, dataSize);
+        
+        int lineBytes = width * 1;
+        int colBytes = 1;
+        
+        int fileOffset = bitmapFileHeader.offset;
+        int memOffset = 0;
+        
+        for(int line = 0; line < height; line++){
+            for(int col = 0; col < width; col ++){
+                fseek(lpFile, fileOffset, SEEK_SET);
+                fread(data + memOffset, 1, 1, lpFile);
+                fileOffset += colBytes;
+                memOffset += colBytes;
+            }
+        }
+        
     }else if(bitmapInfoHeader.bitCount == 24){
             // 24 位，RGB 3色
         width = bitmapInfoHeader.width;
@@ -77,7 +105,7 @@ int Image::loadImage(char *path){
                 memOffset+= colBytes;
             }
         }
-    }
+    }// end if
     
     if(NULL!=lpFile){
         fclose(lpFile);
