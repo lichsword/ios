@@ -37,3 +37,11 @@ void Surface::display(){
 void Surface::keyboard(unsigned char key, int x, int y){
         // do nothing.
 }
+
+void Surface::onMotion(int x, int y){
+        // do nothing
+}
+
+void Surface::onMouseEvent(int button, int state, int x, int y){
+    // do nothing
+}

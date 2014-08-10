@@ -19,6 +19,7 @@
 #include "Surface_28_Bezier.h"
 #include "Surface_34_HeightMap.h"
 #include "Surface_11_Wave.h"
+#include "Surface_51_SkyBox.h"
 
 Button showFreetypeButton(10, 10, 150, 40);
 Button showTrangleButton(10, 60, 150, 40);
@@ -30,6 +31,7 @@ Button showLightButton(10, 310, 150, 40);
 Button showBezierButton(10, 360, 150, 40);
 Button showHeightMapButton(10, 410, 150, 40);
 Button showWaveButton(10, 460, 150, 40);
+Button showSkyBoxButton(10, 510, 150, 40);
     // surfaces
 Surface * currentSurface;
 BaseWindowSurface baseWindowSurface;
@@ -42,6 +44,7 @@ LightSurface lightSurface;
 BezierSurface bezierSurface;
 HeightMapSurface heightMapSurface;
 WaveSurface waveSurface;
+SkyBoxSurface skyBoxSurface;
 
 void choose01(){
         //    FileLog::getInstance()->init();
@@ -92,6 +95,11 @@ void choose28(){
 
 void choose34(){
     currentSurface = &heightMapSurface;
+    currentSurface->onStart();
+}
+
+void choose51(){
+    currentSurface = &skyBoxSurface;
     currentSurface->onStart();
 }
 
@@ -171,6 +179,13 @@ void Scene::init(){
                                    new GLubyte[3]{0xac, 0xe1, 0xaf}
                                    );
     showHeightMapButton.setOnClickListener(choose34);
+        //
+    showSkyBoxButton.setText("show SkyBox");
+    showSkyBoxButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
+                                   new GLubyte[3]{0, 0x75, 0x5e},
+                                   new GLubyte[3]{0xac, 0xe1, 0xaf}
+                                   );
+    showSkyBoxButton.setOnClickListener(choose51);
 }
 
 void Scene::finish(){
@@ -199,6 +214,7 @@ void Scene::display(){
     showBezierButton.display();
     showHeightMapButton.display();
     showWaveButton.display();
+    showSkyBoxButton.display();
 }
 
 void Scene::onMouseEvent(int button, int state, int x, int y){
@@ -212,6 +228,10 @@ void Scene::onMouseEvent(int button, int state, int x, int y){
     showBezierButton.onMouseEvent(button, state, x, y);
     showHeightMapButton.onMouseEvent(button, state, x, y);
     showWaveButton.onMouseEvent(button, state, x, y);
+    showSkyBoxButton.onMouseEvent(button, state, x, y);
+    if(NULL!=currentSurface){
+        currentSurface->onMouseEvent(button, state, x, y);
+    }// end if
 }
 
 void Scene::onMotion(int x, int y){
@@ -225,6 +245,10 @@ void Scene::onMotion(int x, int y){
     showBezierButton.onMotion(x, y);
     showHeightMapButton.onMotion(x, y);
     showWaveButton.onMotion(x, y);
+    showSkyBoxButton.onMotion(x, y);
+    if(NULL!=currentSurface){
+        currentSurface->onMotion(x, y);
+    }// end if
 }
 
 void Scene::onPassiveMotion(int x, int y){
@@ -238,6 +262,7 @@ void Scene::onPassiveMotion(int x, int y){
     showBezierButton.onPassiveMotion(x, y);
     showHeightMapButton.onPassiveMotion(x, y);
     showWaveButton.onPassiveMotion(x, y);
+    showSkyBoxButton.onPassiveMotion(x, y);
 }
 
 void Scene::onEntry(int state){

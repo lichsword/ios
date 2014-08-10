@@ -10,6 +10,8 @@
 		84053FEF198DDF3E00D32C4C /* Surface_07_Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84053FED198DDF3E00D32C4C /* Surface_07_Light.cpp */; };
 		840A911619727B6E00551A3C /* libFreetype2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 840A911519727B6E00551A3C /* libFreetype2.a */; };
 		841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 841B859F197B7B5A009BECD0 /* Test.cpp */; };
+		84256D891994BAE500888C59 /* Surface_51_SkyBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84256D871994BAE500888C59 /* Surface_51_SkyBox.cpp */; };
+		84256D8C199661F400888C59 /* SkyBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84256D8A199661F400888C59 /* SkyBox.cpp */; };
 		8438DE02198E77E500C3B8A2 /* Surface_28_Bezier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8438DE00198E77E500C3B8A2 /* Surface_28_Bezier.cpp */; };
 		8438DE05198E7B2700C3B8A2 /* bezier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8438DE03198E7B2700C3B8A2 /* bezier.cpp */; };
 		844F0AE019751153003A78DE /* FreeType2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 844F0ADE19751153003A78DE /* FreeType2.cpp */; };
@@ -60,6 +62,10 @@
 		840A911519727B6E00551A3C /* libFreetype2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFreetype2.a; path = ../Libs/libFreetype2.a; sourceTree = "<group>"; };
 		841B859F197B7B5A009BECD0 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		841B85A0197B7B5A009BECD0 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		84256D871994BAE500888C59 /* Surface_51_SkyBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_51_SkyBox.cpp; sourceTree = "<group>"; };
+		84256D881994BAE500888C59 /* Surface_51_SkyBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_51_SkyBox.h; sourceTree = "<group>"; };
+		84256D8A199661F400888C59 /* SkyBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkyBox.cpp; sourceTree = "<group>"; };
+		84256D8B199661F400888C59 /* SkyBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyBox.h; sourceTree = "<group>"; };
 		8438DE00198E77E500C3B8A2 /* Surface_28_Bezier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_28_Bezier.cpp; sourceTree = "<group>"; };
 		8438DE01198E77E500C3B8A2 /* Surface_28_Bezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_28_Bezier.h; sourceTree = "<group>"; };
 		8438DE03198E7B2700C3B8A2 /* bezier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = bezier.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
@@ -297,12 +303,14 @@
 				8498AE2F1984F76700E81EBD /* Surface_06_TextureMap.h */,
 				84053FED198DDF3E00D32C4C /* Surface_07_Light.cpp */,
 				84053FEE198DDF3E00D32C4C /* Surface_07_Light.h */,
+				849B18EB1993B33600A3691D /* Surface_11_Wave.cpp */,
+				849B18EC1993B33600A3691D /* Surface_11_Wave.h */,
 				8438DE00198E77E500C3B8A2 /* Surface_28_Bezier.cpp */,
 				8438DE01198E77E500C3B8A2 /* Surface_28_Bezier.h */,
 				849B18E819912B1A00A3691D /* Surface_34_HeightMap.cpp */,
 				849B18E919912B1A00A3691D /* Surface_34_HeightMap.h */,
-				849B18EB1993B33600A3691D /* Surface_11_Wave.cpp */,
-				849B18EC1993B33600A3691D /* Surface_11_Wave.h */,
+				84256D871994BAE500888C59 /* Surface_51_SkyBox.cpp */,
+				84256D881994BAE500888C59 /* Surface_51_SkyBox.h */,
 			);
 			name = surface;
 			sourceTree = "<group>";
@@ -314,6 +322,8 @@
 				8498AE2C1984F2AF00E81EBD /* image_bitmap.h */,
 				8438DE03198E7B2700C3B8A2 /* bezier.cpp */,
 				8438DE04198E7B2700C3B8A2 /* bezier.h */,
+				84256D8A199661F400888C59 /* SkyBox.cpp */,
+				84256D8B199661F400888C59 /* SkyBox.h */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -429,9 +439,11 @@
 				841B85A1197B7B5A009BECD0 /* Test.cpp in Sources */,
 				844F0AEC1976604E003A78DE /* Scene.cpp in Sources */,
 				849B18EA19912B1A00A3691D /* Surface_34_HeightMap.cpp in Sources */,
+				84256D8C199661F400888C59 /* SkyBox.cpp in Sources */,
 				849286D7197D6BEE000A147E /* Surface_04_Rotate.cpp in Sources */,
 				8498AE2D1984F2AF00E81EBD /* image_bitmap.cpp in Sources */,
 				849286D3197D3A38000A147E /* Surface_03_Colors.cpp in Sources */,
+				84256D891994BAE500888C59 /* Surface_51_SkyBox.cpp in Sources */,
 				844F0AE019751153003A78DE /* FreeType2.cpp in Sources */,
 				8498AE301984F76700E81EBD /* Surface_06_TextureMap.cpp in Sources */,
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,

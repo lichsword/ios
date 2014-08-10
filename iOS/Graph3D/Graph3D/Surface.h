@@ -24,6 +24,8 @@ public:
     virtual void onStart();
     virtual void display();
     virtual void keyboard(unsigned char key, int x, int y);
+    virtual void onMotion(int x, int y);
+    virtual void onMouseEvent(int button, int state, int x, int y);
 };
 
 #endif /* defined(__Graph3D__SurfaceView__) */
