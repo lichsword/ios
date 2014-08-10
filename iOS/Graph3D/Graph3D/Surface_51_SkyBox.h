@@ -31,8 +31,9 @@ private:
     int startY;
     GLfloat lastRotX;
     GLfloat lastRotY;
+    GLenum errorCode;
 private:
-        void loadTexture2D(GLuint id, Image image);
+        void loadTexture2D(GLuint * id, Image image);
 public:
     SkyBoxSurface(){
         enable2D = 1;

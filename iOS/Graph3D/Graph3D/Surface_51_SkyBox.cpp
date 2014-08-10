@@ -8,10 +8,11 @@
 
 #include "Surface_51_SkyBox.h"
 #include "Screen.h"
+#include "FileLog.h"
 
-void SkyBoxSurface::loadTexture2D(GLuint id, Image image){
+void SkyBoxSurface::loadTexture2D(GLuint * id, Image image){
         // 上下文绑定纹理(一般在glTexImage2D之后调用)
-    glBindTexture(GL_TEXTURE_2D, id);
+    glBindTexture(GL_TEXTURE_2D, * id);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); // 线形滤波
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // 线形滤波
     
@@ -20,6 +21,7 @@ void SkyBoxSurface::loadTexture2D(GLuint id, Image image){
 }
 
 void SkyBoxSurface::onStart(){
+    FileLog::getInstance()->init();
         // 加载纹理
     lpSkyBox = new SkyBox(SkyBox::TYPE_BOX);
     lpSkyBox->loadBmp(0, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_down.bmp");
@@ -34,9 +36,34 @@ void SkyBoxSurface::onStart(){
     lpTextures = new GLuint[size];
     glGenTextures(size, lpTextures);
     
+    errorCode = glGetError();
+    switch (errorCode) {
+        case GL_NO_ERROR:
+            FileLog::getInstance()->e("GL_NO_ERROR");
+            break;
+        case GL_INVALID_ENUM:
+            FileLog::getInstance()->e("GL_NO_ERROR");
+            break;
+        case GL_INVALID_VALUE:
+            FileLog::getInstance()->e("GL_NO_ERROR");
+            break;
+        case GL_INVALID_OPERATION:
+            FileLog::getInstance()->e("GL_NO_ERROR");
+            break;
+        case GL_INVALID_FRAMEBUFFER_OPERATION:
+            FileLog::getInstance()->e("GL_NO_ERROR");
+            break;
+        case GL_OUT_OF_MEMORY:
+            FileLog::getInstance()->e("GL_NO_ERROR");
+            break;
+        default:
+            FileLog::getInstance()->e("Unknown error");
+            break;
+    }
+     
     Image * lpImages = lpSkyBox->getImageRef();
     for(int i=0; i<size; i++){
-        loadTexture2D(lpTextures[i], lpImages[i]);
+        loadTexture2D(&lpTextures[i], lpImages[i]);
     }
     
         // 使用2D纹理
@@ -122,15 +149,18 @@ void SkyBoxSurface::display(){
     glTexCoord2f(0.0f, 1.0f);glVertex3f(-1.0f, 1.0f, -1.0f);
     glEnd();
         // 左面
+    glBindTexture(GL_TEXTURE_2D, lpTextures[2]);
         // 开始绘制
     glBegin(GL_QUADS);
-    glBindTexture(GL_TEXTURE_2D, lpTextures[2]);
     glNormal3f(1.0f, 0.0f, 0.0f);
     glTexCoord2f(0.0f, 0.0f);glVertex3f(-1.0f, -1.0f, -1.0f);
     glTexCoord2f(1.0f, 0.0f);glVertex3f(-1.0f, 1.0f, -1.0f);
     glTexCoord2f(1.0f, 1.0f);glVertex3f(-1.0f, 1.0f, 1.0f);
     glTexCoord2f(0.0f, 1.0f);glVertex3f(-1.0f, -1.0f, 1.0f);
     glEnd();
+    
+        // 清除上下文纹理
+    glBindTexture(GL_TEXTURE_2D, 0);
     
     glPopMatrix();
 }
