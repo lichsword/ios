@@ -22,10 +22,18 @@
          contextName = "TextureMapSurface::onStart():Surface_06_TextureMap.cpp">
          <PersistentStrings>
             <PersistentString
-               value = "textureIDs[0]">
+               value = "textureIDs[1]">
             </PersistentString>
             <PersistentString
-               value = "textureIDs[1]">
+               value = "textureIDs[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SkyBoxSurface::onStart():Surface_51_SkyBox.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "*(lpTextures + 1)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

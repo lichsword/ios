@@ -15,6 +15,7 @@
 
 class SkyBoxSurface : public Surface{
 private:
+    int enable2D;
     SkyBox * lpSkyBox;
     GLuint * lpTextures;
     GLfloat x;
@@ -31,10 +32,11 @@ private:
     GLfloat lastRotX;
     GLfloat lastRotY;
 private:
-    void loadTexture2D(GLuint id, Image image);
+        void loadTexture2D(GLuint id, Image image);
 public:
     SkyBoxSurface(){
-        z = -10.0f;
+        enable2D = 1;
+        z = -4.0f;
     }
     virtual void onStart();
     virtual void display();

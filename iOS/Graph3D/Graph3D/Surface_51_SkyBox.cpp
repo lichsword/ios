@@ -22,12 +22,12 @@ void SkyBoxSurface::loadTexture2D(GLuint id, Image image){
 void SkyBoxSurface::onStart(){
         // 加载纹理
     lpSkyBox = new SkyBox(SkyBox::TYPE_BOX);
-    lpSkyBox->a(0, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_down.bmp");
-    lpSkyBox->a(1, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_up.bmp");
-    lpSkyBox->a(2, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_east.bmp");
-    lpSkyBox->a(3, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_west.bmp");
-    lpSkyBox->a(4, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_north.bmp");
-    lpSkyBox->a(5, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_south.bmp");
+    lpSkyBox->loadBmp(0, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_down.bmp");
+    lpSkyBox->loadBmp(1, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_up.bmp");
+    lpSkyBox->loadBmp(2, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_east.bmp");
+    lpSkyBox->loadBmp(3, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_west.bmp");
+    lpSkyBox->loadBmp(4, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_north.bmp");
+    lpSkyBox->loadBmp(5, "/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/redsky/redsky_south.bmp");
         // 绑定纹理
     int size = SkyBox::SIZE_BOX;
         //
@@ -35,8 +35,7 @@ void SkyBoxSurface::onStart(){
     glGenTextures(size, lpTextures);
     
     Image * lpImages = lpSkyBox->getImageRef();
-    for(int i =0; i<size; i++){
-        glBindTexture(GL_TEXTURE_2D, lpTextures[i]);
+    for(int i=0; i<size; i++){
         loadTexture2D(lpTextures[i], lpImages[i]);
     }
     
@@ -74,9 +73,17 @@ void SkyBoxSurface::onStart(){
     glLightfv(GL_LIGHT0, GL_POSITION,LightPosition);
         // 启用0号光源
     glEnable(GL_LIGHT0);
+    
+    glBindTexture(GL_TEXTURE_2D, lpTextures[0]);
 }
 
 void SkyBoxSurface::display(){
+    
+    if(enable2D){
+        glEnable(GL_TEXTURE_2D);
+    }else{
+        glDisable(GL_TEXTURE_2D);
+    }
     
         // 设置深度缓冲值为1.0f
     glClearDepth(1.0f);
@@ -115,9 +122,9 @@ void SkyBoxSurface::display(){
     glTexCoord2f(0.0f, 1.0f);glVertex3f(-1.0f, 1.0f, -1.0f);
     glEnd();
         // 左面
-    glBindTexture(GL_TEXTURE_2D, lpTextures[2]);
         // 开始绘制
     glBegin(GL_QUADS);
+    glBindTexture(GL_TEXTURE_2D, lpTextures[2]);
     glNormal3f(1.0f, 0.0f, 0.0f);
     glTexCoord2f(0.0f, 0.0f);glVertex3f(-1.0f, -1.0f, -1.0f);
     glTexCoord2f(1.0f, 0.0f);glVertex3f(-1.0f, 1.0f, -1.0f);
@@ -129,7 +136,18 @@ void SkyBoxSurface::display(){
 }
 
 void SkyBoxSurface::keyboard(unsigned char key, int x, int y){
-    
+    switch (key) {
+        case 'd':
+        case 'D':
+            if(enable2D==0){
+                enable2D = 1;
+            }else{
+                enable2D = 0;
+            }// end if
+            break;
+        default:
+            break;
+    }
 }
 
 void SkyBoxSurface::onMouseEvent(int button, int state, int x, int y){
@@ -153,5 +171,5 @@ void SkyBoxSurface::onMouseEvent(int button, int state, int x, int y){
 
 void SkyBoxSurface::onMotion(int x, int y){
     rotX = lastRotX + ((GLfloat)(x - startX) / (GLfloat)10);
-    rotY = lastRotY + ((GLfloat)(y - startY) / (GLfloat)10);
+    rotY = lastRotY + ((GLfloat)(startY - y) / (GLfloat)10);
 }

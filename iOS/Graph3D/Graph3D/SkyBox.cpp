@@ -8,7 +8,7 @@
 
 #include "SkyBox.h"
 
-void SkyBox::a(int index, char * path){
+void SkyBox::loadBmp(int index, char * path){
     switch (this->type) {
         case SkyBox::TYPE_BOX:
             if (NULL==lpImages) {

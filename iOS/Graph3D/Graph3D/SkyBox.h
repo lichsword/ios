@@ -35,7 +35,7 @@ public:
     int getType(){
         return type;
     }
-    void a(int index, char * path);
+    void loadBmp(int index, char * path);
     
     Image * getImageRef(){
         return lpImages;
