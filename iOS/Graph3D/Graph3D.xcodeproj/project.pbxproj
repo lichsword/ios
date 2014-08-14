@@ -43,6 +43,7 @@
 		8498AE3319852CBB00E81EBD /* NeHe.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 8498AE3219852CBB00E81EBD /* NeHe.bmp */; };
 		849B18EA19912B1A00A3691D /* Surface_34_HeightMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B18E819912B1A00A3691D /* Surface_34_HeightMap.cpp */; };
 		849B18ED1993B33600A3691D /* Surface_11_Wave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 849B18EB1993B33600A3691D /* Surface_11_Wave.cpp */; };
+		84C2238E1998C737009F77A1 /* ErrorReport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C2238C1998C737009F77A1 /* ErrorReport.cpp */; };
 		84C741161981518500E055C5 /* Surface_05_Cube3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C741141981518500E055C5 /* Surface_05_Cube3D.cpp */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,8 @@
 		849B18E919912B1A00A3691D /* Surface_34_HeightMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_34_HeightMap.h; sourceTree = "<group>"; };
 		849B18EB1993B33600A3691D /* Surface_11_Wave.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_11_Wave.cpp; sourceTree = "<group>"; };
 		849B18EC1993B33600A3691D /* Surface_11_Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_11_Wave.h; sourceTree = "<group>"; };
+		84C2238C1998C737009F77A1 /* ErrorReport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ErrorReport.cpp; sourceTree = "<group>"; };
+		84C2238D1998C737009F77A1 /* ErrorReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorReport.h; sourceTree = "<group>"; };
 		84C741141981518500E055C5 /* Surface_05_Cube3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Surface_05_Cube3D.cpp; sourceTree = "<group>"; };
 		84C741151981518500E055C5 /* Surface_05_Cube3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Surface_05_Cube3D.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +177,8 @@
 			children = (
 				844F0AE719754EDE003A78DE /* FileLog.cpp */,
 				844F0AE819754EDE003A78DE /* FileLog.h */,
+				84C2238C1998C737009F77A1 /* ErrorReport.cpp */,
+				84C2238D1998C737009F77A1 /* ErrorReport.h */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				8462577C1971598000096DB0 /* Main.cpp in Sources */,
 				8438DE02198E77E500C3B8A2 /* Surface_28_Bezier.cpp in Sources */,
 				849286CC197D3709000A147E /* Surface_01_BaseWindow.cpp in Sources */,
+				84C2238E1998C737009F77A1 /* ErrorReport.cpp in Sources */,
 				849286D0197D399F000A147E /* Surface_02_Quads.cpp in Sources */,
 				844F0AE319752A17003A78DE /* Button.cpp in Sources */,
 				844F0AF31977EB34003A78DE /* View.cpp in Sources */,

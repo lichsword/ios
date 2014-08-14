@@ -49,12 +49,7 @@ void WaveSurface::onStart(){
      */
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     
-    glMatrixMode(GL_PROJECTION);// 选择投影矩阵
-	glLoadIdentity(); // 重置投影矩阵
-    
-	gluPerspective(45.0f, (GLfloat)real_w/(GLfloat)real_h, 0.1f, 100.0f);// 设置视口的大小
-	glMatrixMode(GL_MODELVIEW); // 选择模型观察矩阵
-	glLoadIdentity(); // 重置模型观察矩阵
+    setProjection();
     
         // 沿X平面循环
 	for(int x=0; x<45; x++){

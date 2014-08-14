@@ -9,6 +9,7 @@
 #include "Surface_51_SkyBox.h"
 #include "Screen.h"
 #include "FileLog.h"
+#include "ErrorReport.h"
 
 void SkyBoxSurface::loadTexture2D(GLuint * id, Image image){
         // 上下文绑定纹理(一般在glTexImage2D之后调用)
@@ -36,31 +37,8 @@ void SkyBoxSurface::onStart(){
     lpTextures = new GLuint[size];
     glGenTextures(size, lpTextures);
     
-    errorCode = glGetError();
-    switch (errorCode) {
-        case GL_NO_ERROR:
-            FileLog::getInstance()->e("GL_NO_ERROR");
-            break;
-        case GL_INVALID_ENUM:
-            FileLog::getInstance()->e("GL_NO_ERROR");
-            break;
-        case GL_INVALID_VALUE:
-            FileLog::getInstance()->e("GL_NO_ERROR");
-            break;
-        case GL_INVALID_OPERATION:
-            FileLog::getInstance()->e("GL_NO_ERROR");
-            break;
-        case GL_INVALID_FRAMEBUFFER_OPERATION:
-            FileLog::getInstance()->e("GL_NO_ERROR");
-            break;
-        case GL_OUT_OF_MEMORY:
-            FileLog::getInstance()->e("GL_NO_ERROR");
-            break;
-        default:
-            FileLog::getInstance()->e("Unknown error");
-            break;
-    }
-     
+    ErrorReport::getInstance()->print("");
+    
     Image * lpImages = lpSkyBox->getImageRef();
     for(int i=0; i<size; i++){
         loadTexture2D(&lpTextures[i], lpImages[i]);
@@ -87,12 +65,7 @@ void SkyBoxSurface::onStart(){
      */
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     
-    glMatrixMode(GL_PROJECTION);// 选择投影矩阵
-	glLoadIdentity(); // 重置投影矩阵
-    
-	gluPerspective(45.0f, (GLfloat)real_w/(GLfloat)real_h, 0.1f, 100.0f);// 设置视口的大小
-	glMatrixMode(GL_MODELVIEW); // 选择模型观察矩阵
-	glLoadIdentity(); // 重置模型观察矩阵
+    setProjection();
     
         // 设置环境光
     glLightfv(GL_LIGHT0, GL_AMBIENT, LightAmbient);

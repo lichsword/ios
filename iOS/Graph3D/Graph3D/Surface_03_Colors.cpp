@@ -10,12 +10,7 @@
 #include "Screen.h"
 
 void ColorsSurface::onStart(){
-    glMatrixMode(GL_PROJECTION);// 选择投影矩阵
-	glLoadIdentity(); // 重置投影矩阵
-                      // 设置视口的大小
-	gluPerspective(45.0f,(GLfloat)real_w/(GLfloat)real_h,0.1f,100.0f);
-	glMatrixMode(GL_MODELVIEW); // 选择模型观察矩阵
-	glLoadIdentity(); // 重置模型观察矩阵
+    setProjection();
 }
 
 void ColorsSurface::display(){

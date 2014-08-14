@@ -26,7 +26,8 @@ private:
 public:
     TextureMapSurface(){
         bmp_file_1 ="/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/NeHe_rebuild.bmp";
-        bmp_file_2 ="/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/test_color_green_win.bmp";
+//        bmp_file_2 ="/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/glass.bmp";
+        bmp_file_2 ="/Users/lichsword/Documents/workspace_apple/others/nehe-tuts/Data/cube.bmp";
     }
     virtual void onStart();
     virtual void display();

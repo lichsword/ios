@@ -1,1 +1,1 @@
-GL_NO_ERROR
+button=0, state=1, x=103, y=283button=0, state=1, x=103, y=283button=0, state=1, x=103, y=283button=0, state=1, x=103, y=283button=0, state=1, x=103, y=283

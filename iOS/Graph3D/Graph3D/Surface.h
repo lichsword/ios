@@ -20,6 +20,9 @@
 #include <stdexcept>
 
 class Surface{
+protected:
+        // 设置投影矩阵
+    void setProjection();
 public:
     virtual void onStart();
     virtual void display();

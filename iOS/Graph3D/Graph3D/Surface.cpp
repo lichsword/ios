@@ -9,6 +9,8 @@
 
 #include "Surface.h"
 #include "FreeType2.h"
+#include "ErrorReport.h"
+#include "Screen.h"
 
 GLfloat	cnt1;			// 字体移动计数器1
 GLfloat	cnt2;			// 字体移动计数器2
@@ -44,4 +46,13 @@ void Surface::onMotion(int x, int y){
 
 void Surface::onMouseEvent(int button, int state, int x, int y){
     // do nothing
+}
+
+void Surface::setProjection(){
+    glMatrixMode(GL_PROJECTION);// 选择投影矩阵
+	glLoadIdentity(); // 重置投影矩阵
+                      // 设置视口的大小
+	gluPerspective(45.0f,(GLfloat)real_w/(GLfloat)real_h,0.1f,100.0f);
+	glMatrixMode(GL_MODELVIEW); // 选择模型观察矩阵
+	glLoadIdentity(); // 重置模型观察矩阵
 }
