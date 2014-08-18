@@ -27,7 +27,7 @@ class Button : public View{
 public:
     Button(int left, int top, int width, int height);
     void setText(char *);
-        void setTextColor(GLubyte color[3]);
+    void setTextColor(GLubyte color[3]);
     virtual void display();
 private:
     void drawText();

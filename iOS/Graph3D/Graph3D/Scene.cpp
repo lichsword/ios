@@ -46,9 +46,13 @@ HeightMapSurface heightMapSurface;
 WaveSurface waveSurface;
 SkyBoxSurface skyBoxSurface;
 
+Scene::Scene(){
+    enableUnitTest = 1;
+    currentSurface = &textureMapSurface;
+    currentSurface->onStart();
+}
+
 void choose01(){
-        //    FileLog::getInstance()->init();
-        //    FileLog::getInstance()->e("press test click btn");
     currentSurface = &baseWindowSurface;
     currentSurface->onStart();
 }
@@ -103,13 +107,14 @@ void choose51(){
     currentSurface->onStart();
 }
 
-
-
-Scene::Scene(){
-    
-}
-
 void Scene::init(){
+    /**
+     * 启用了单元测试，则不再加载混合的模块样例
+     */
+    if (enableUnitTest) {
+        return;
+    }// end if
+    
     showFreetypeButton.setText("show freetype2");
     showFreetypeButton.setBgColor(new GLubyte[3]{0, 0xff, 0x80},
                                   new GLubyte[3]{0, 0x75, 0x5e},
@@ -204,6 +209,11 @@ void Scene::display(){
     if(NULL!=currentSurface){
         currentSurface->display();
     }// end if
+    
+    if (enableUnitTest) {
+        return;
+    }// end if
+    
     showFreetypeButton.display();
     showTrangleButton.display();
     showColorButton.display();
@@ -218,6 +228,14 @@ void Scene::display(){
 }
 
 void Scene::onMouseEvent(int button, int state, int x, int y){
+    if(NULL!=currentSurface){
+        currentSurface->onMouseEvent(button, state, x, y);
+    }// end if
+    
+    if (enableUnitTest) {
+        return;
+    }// end if
+    
     showFreetypeButton.onMouseEvent(button, state, x, y);
     showTrangleButton.onMouseEvent(button, state, x, y);
     showColorButton.onMouseEvent(button, state, x, y);
@@ -229,12 +247,17 @@ void Scene::onMouseEvent(int button, int state, int x, int y){
     showHeightMapButton.onMouseEvent(button, state, x, y);
     showWaveButton.onMouseEvent(button, state, x, y);
     showSkyBoxButton.onMouseEvent(button, state, x, y);
-    if(NULL!=currentSurface){
-        currentSurface->onMouseEvent(button, state, x, y);
-    }// end if
 }
 
 void Scene::onMotion(int x, int y){
+    if(NULL!=currentSurface){
+        currentSurface->onMotion(x, y);
+    }// end if
+    
+    if (enableUnitTest) {
+        return;
+    }// end if
+    
     showFreetypeButton.onMotion(x, y);
     showTrangleButton.onMotion(x, y);
     showColorButton.onMotion(x, y);
@@ -246,12 +269,17 @@ void Scene::onMotion(int x, int y){
     showHeightMapButton.onMotion(x, y);
     showWaveButton.onMotion(x, y);
     showSkyBoxButton.onMotion(x, y);
-    if(NULL!=currentSurface){
-        currentSurface->onMotion(x, y);
-    }// end if
 }
 
 void Scene::onPassiveMotion(int x, int y){
+    if(NULL!=currentSurface){
+//        currentSurface->onPassiveMotion(x, y);
+    }// end if
+    
+    if (enableUnitTest) {
+        return;
+    }// end if
+    
     showFreetypeButton.onPassiveMotion(x, y);
     showTrangleButton.onPassiveMotion(x, y);
     showColorButton.onPassiveMotion(x, y);

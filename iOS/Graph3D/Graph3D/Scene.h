@@ -12,7 +12,8 @@
 #include <iostream>
 
 class Scene{
-
+private:
+    int enableUnitTest;// 开启单元测试
 public:
     Scene();
     void onCreate();
